@@ -29,14 +29,14 @@
         </ul>
 
                 <?php
-                    session_start();
+                session_start();
 
-                    if(isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
-                        $nom = $_SESSION['nom'];
-                        $prenom = $_SESSION['prenom'];
-                        $idinscription = $_SESSION['idinscription'];
-                        $email = $_SESSION['email'];
-                        echo "<div  class='dropdown'>
+                if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
+                    $nom = $_SESSION['nom'];
+                    $prenom = $_SESSION['prenom'];
+                    $idinscription = $_SESSION['idinscription'];
+                    $email = $_SESSION['email'];
+                    echo "<div  class='dropdown'>
                               <a>$nom $prenom</a>
                             <div class='dropdown-content'>
                             <a href='profile.php'>Profil</a>
@@ -44,12 +44,12 @@
                             </div>
                             
                             </div>";
-                        } else {
-                            echo "<div class='login'>
+                } else {
+                    echo "<div class='login'>
                             <a href='inscription.php'>Connexion</a>
                           </div>";
-                        }
-                        
+                }
+
                 ?>
                 
         </nav>
@@ -238,23 +238,23 @@
         
     </script>
     <?php
-        // Connect to the database
-        $servername="localhost";
-        $username="root";
-        $password="";
-        $database_name="supercar";
+    // Connect to the database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database_name = "supercar";
 
-        $conn = new mysqli($servername, $username, $password, $database_name);
+    $conn = new mysqli($servername, $username, $password, $database_name);
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-        // Retrieve cars from database
-        $sql = "SELECT * FROM caroussel ORDER BY id_update DESC LIMIT 1";
-        $result = $conn->query($sql);
-        $acc = mysqli_fetch_assoc($result);
+    // Retrieve cars from database
+    $sql = "SELECT * FROM caroussel ORDER BY id_update DESC LIMIT 1";
+    $result = $conn->query($sql);
+    $acc = mysqli_fetch_assoc($result);
     ?>
 
 

@@ -1,82 +1,86 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.accoutn_main{
+.accoutn_main {
   position: relative;
   height: 100%;
   width: 100%;
   z-index: 999;
 }
 
-.accoutn_main .video{
+.accoutn_main .video {
   position: fixed;
   z-index: -100;
   width: 100%;
   height: auto;
 }
 
-.form_area{
+.form_area {
   width: 100%;
   height: 100%;
   background-size: 100% 200%;
-  background:transparent;
+  background: transparent;
 
 }
-.window{
-  width:500px;
-  height:600px;
-  padding:40px;
-  text-align:center;
-  border:3px solid rgb(11, 11, 11);
-  border-radius:20px;
-  
-  backdrop-filter:blur(20px) brightness(90%);
-  
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  color:white;
+
+.window {
+  width: 500px;
+  height: 600px;
+  padding: 40px;
+  text-align: center;
+  border: 3px solid rgb(11, 11, 11);
+  border-radius: 20px;
+
+  backdrop-filter: blur(20px) brightness(90%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.main_con{
+.main_con {
   position: relative;
   padding: 50px;
   width: 550px;
-}   
-.headline{
+}
+
+.headline {
   text-align: center;
   color: #fff;
   margin: 20px 0;
 }
 
-.form_con{
+.form_con {
   position: relative;
   padding: 40px;
   width: 100%;
 }
 
-.form_con h1{
+.form_con h1 {
   margin: 0px 0px;
   padding: 0px;
   color: #000000;
   text-shadow: 1px 0 #fff;
   text-align: center;
 }
-.form_con h2{
+
+.form_con h2 {
   margin: 0px 0px;
   padding: 0px;
   color: #000000;
   text-shadow: 1px 0 #fff;
 }
-.form_con .input-box{
+
+.form_con .input-box {
   position: relative;
 }
 
-.form_con .input-box input{
+.form_con .input-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -88,7 +92,7 @@
   background: transparent;
 }
 
-.form_con .input-box label{
+.form_con .input-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,18 +103,19 @@
   transition: .5s;
 }
 
-.form_con .input-box input:focus + label,
-.form_con .input-box input:valid + label{
+.form_con .input-box input:focus+label,
+.form_con .input-box input:valid+label {
   top: -25px;
   left: 0;
   color: #fff;
   font-size: 18px;
 }
 
-.form_con .button{
+.form_con .button {
   text-align: center;
 }
-.form_con button{
+
+.form_con button {
   font-size: 20px;
   padding: 8px 20px;
   background: none;
@@ -121,18 +126,18 @@
   border-radius: 5px;
 }
 
-.form_con button:hover{
+.form_con button:hover {
   background: #DDDDDD;
   color: #1661C2;
   border-radius: 5px;
   box-shadow: 0 0 5px #DDDDDD, 0 0 25px #DDDDDD, 0 0 50px #DDDDDD, 0 0 100px #DDDDDD;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.text-center{
+.text-center {
   text-align: center;
   color: #fff;
   margin: 15px 0;
@@ -142,37 +147,41 @@
 
 
 /* responsive media query */
-@media (max-width: 1080px){
-  .video{
-      display: none;
+@media (max-width: 1080px) {
+  .video {
+    display: none;
   }
-  .accoutn_main{
-      width: 100%;
-      height: 100%;
-      background: url(../image/m-d-playing.jpg) no-repeat;
-      background-size:  cover;
+
+  .accoutn_main {
+    width: 100%;
+    height: 100%;
+    background: url(../image/m-d-playing.jpg) no-repeat;
+    background-size: cover;
   }
-  
+
 }
 
-@media (max-width: 665px){
-  .video{
-      display: none;
+@media (max-width: 665px) {
+  .video {
+    display: none;
   }
-  .accoutn_main{
-      background: #1661C2;
+
+  .accoutn_main {
+    background: #1661C2;
   }
-  
+
 }
-@media (max-width: 550px){
-  .video{
-      display: none;
+
+@media (max-width: 550px) {
+  .video {
+    display: none;
   }
-  .accoutn_main{
-      background: #1661C2;
+
+  .accoutn_main {
+    background: #1661C2;
   }
-  .main_con{
-      width: 100%;
+
+  .main_con {
+    width: 100%;
   }
 }
-    

@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Handle video upload
     if (isset($_FILES["Video"]["name"]) && !empty($_FILES["Video"]["name"])) {
-        $targetDirectory = "../Video/";  // Create a directory for storing uploaded videos
+        $targetDirectory = "../Video/"; // Create a directory for storing uploaded videos
         $targetFile = $targetDirectory . basename($_FILES["Video"]["name"]);
 
         if (move_uploaded_file($_FILES["Video"]["tmp_name"], $targetFile)) {
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Handle image upload
     if (isset($_FILES["Image"]["name"]) && !empty($_FILES["Image"]["name"])) {
-        $targetDirectory = "../Image/";  // Create a directory for storing uploaded images
+        $targetDirectory = "../Image/"; // Create a directory for storing uploaded images
         $targetFile = $targetDirectory . basename($_FILES["Image"]["name"]);
 
         if (move_uploaded_file($_FILES["Image"]["tmp_name"], $targetFile)) {

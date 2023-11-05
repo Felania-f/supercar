@@ -1,6 +1,6 @@
 body {
   margin: 0 !important;
-  font-family: "Cabin","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 16px;
   background-color: black !important;
 }
@@ -17,7 +17,8 @@ body {
 .container {
   width: 100%;
   margin-top: 10px;
-  margin-left: 130px !important; /* adjust the value based on the width of the category element */
+  margin-left: 130px !important;
+  /* adjust the value based on the width of the category element */
 }
 
 .category {
@@ -103,4 +104,3 @@ button {
   margin-bottom: 30px;
   width: 300px;
 }
-

@@ -37,7 +37,8 @@ input[type="file"] {
   display: none;
 }
 
-label[for="Video"], label[for="Image"] {
+label[for="Video"],
+label[for="Image"] {
   cursor: pointer;
   border: 1px solid #ccc;
   padding: 5px;
@@ -45,7 +46,8 @@ label[for="Video"], label[for="Image"] {
   background-color: #f9f9f9;
 }
 
-#videoPreview, #imagePreview {
+#videoPreview,
+#imagePreview {
   max-width: 100%;
   height: auto;
   border: 1px solid #ccc;
@@ -79,84 +81,90 @@ textarea {
   background-color: #ccc;
 }
 
-.btn:hover, .btn-secondary:hover {
+.btn:hover,
+.btn-secondary:hover {
   background-color: #0056b3;
 }
+
 .form-group {
   display: inline-block;
-  margin-right: 20px; /* Ajustez la marge selon vos préférences */
+  margin-right: 20px;
+  /* Ajustez la marge selon vos préférences */
 }
+
 .form-group label {
   display: block;
 }
 
 textarea#details {
-width: 27em;
-height: 5em;
+  width: 27em;
+  height: 5em;
 }
 
 input[type="date"] {
   width: 12em;
 }
 
-#ajouter_contact{
+#ajouter_contact {
   width: 22em;
   margin-top: 4em;
 }
 
 #ajouter_contact label[for*="nom_complet"],
 #ajouter_contact label[for*="email"],
-#ajouter_contact label[for*="message"]{
+#ajouter_contact label[for*="message"] {
   margin-right: 0.5em;
 }
 
-#ajouter_contact input[id*="full_name"]{
+#ajouter_contact input[id*="full_name"] {
   width: 13em;
 }
 
-#ajouter_contact input[id*="email"]{
-width: 14.6em;
+#ajouter_contact input[id*="email"] {
+  width: 14.6em;
 }
 
-#edit_event textarea[id*="Petit_text"]{
+#edit_event textarea[id*="Petit_text"] {
   height: 9em;
   width: 22em;
 }
 
-#edit_event textarea[id*="Petit_titre"]{
+#edit_event textarea[id*="Petit_titre"] {
   width: 18em;
   height: 7em;
 }
 
-#edit_event textarea[id*="Texte"]{
+#edit_event textarea[id*="Texte"] {
   height: 12em;
   width: 87em;
 }
 
-#edit_event textarea[id*="Titre"]{
+#edit_event textarea[id*="Titre"] {
   height: 7em;
   width: 13em;
 }
 
-#edit_event hr{
+#edit_event hr {
   border: none;
-  height: 3px; /* Vous pouvez ajuster l'épaisseur ici */
-  background: #eae9e9; /* Couleur grise */
+  height: 3px;
+  /* Vous pouvez ajuster l'épaisseur ici */
+  background: #eae9e9;
+  /* Couleur grise */
   margin: 20px 0;
 }
 
-#add_event{
+#add_event {
   width: 53em;
 }
 
 #add_event label[for*="Image"],
-#add_event label[for*="Video"]{
+#add_event label[for*="Video"] {
   width: 7em;
 }
 
 #edit_utilisateur,
 #edit_contact,
-#edit_demande{
+#edit_demande {
   width: 32em;
 }
 
@@ -164,14 +172,14 @@ width: 14.6em;
 #edit_contact #show_contact,
 #edit_demande #show_demande,
 #add_event .profil,
-#add_contact{
+#add_contact {
   display: grid;
 }
 
 #edit_utilisateur .form-group,
 #edit_contact .form-group,
 #edit_demande .form-group,
-#ajouter_contact .form-group{
+#ajouter_contact .form-group {
   display: flex;
 }
 
@@ -265,4 +273,5 @@ width: 14.6em;
   margin-top: 10px;
   border-radius: 5px;
 }
+
 /* End ajouter voiture */

@@ -29,39 +29,39 @@
                 </ul>
 
                 <?php
-                    session_start();
+                session_start();
 
-                    if(isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email']) && isset($_SESSION['mot_de_passe']) && isset($_SESSION['numero_de_telephone']) && isset($_SESSION['civilite'])) {
-                        $nom = $_SESSION['nom'];
-                        $prenom = $_SESSION['prenom'];
-                        $idinscription = $_SESSION['idinscription'];
-                        $email = $_SESSION['email'];
-                        $mot_de_passe = $_SESSION['mot_de_passe'];
-                        $numero_de_telephone = $_SESSION['numero_de_telephone'];
-                        $civilite = $_SESSION['civilite'];
-                        echo "<div  class='dropdown'>
+                if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email']) && isset($_SESSION['mot_de_passe']) && isset($_SESSION['numero_de_telephone']) && isset($_SESSION['civilite'])) {
+                    $nom = $_SESSION['nom'];
+                    $prenom = $_SESSION['prenom'];
+                    $idinscription = $_SESSION['idinscription'];
+                    $email = $_SESSION['email'];
+                    $mot_de_passe = $_SESSION['mot_de_passe'];
+                    $numero_de_telephone = $_SESSION['numero_de_telephone'];
+                    $civilite = $_SESSION['civilite'];
+                    echo "<div  class='dropdown'>
                               <a>$nom $prenom</a>
                               <div class='dropdown-content'>
                               <a href='profile.php'>Profil</a>
                             <a href='deconnexion.php'>Déconnexion</a>
                             </div>
                             </div>";
-                        } else {
-                            echo "<div class='login'>
+                } else {
+                    echo "<div class='login'>
                             <a href='inscription.php'>Connexion</a>
                           </div>";
-                        }
-                            // Initialize edit mode variable
-                            $editMode = false;
+                }
+                // Initialize edit mode variable
+                $editMode = false;
 
-                            // Check if the edit parameter is present in the URL
-                            if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
-                                $editMode = true;
-                            }
+                // Check if the edit parameter is present in the URL
+                if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
+                    $editMode = true;
+                }
 
-                            // Rest of your existing PHP code
-                            // ...
-                            ?>
+                // Rest of your existing PHP code
+                // ...
+                ?>
 
                         
           
@@ -73,86 +73,86 @@
         <h1>Edit Your Profile</h1>
         <div class="profile-form">
             <?php if ($editMode) { ?>
-                <!-- Edit Form -->
-                <form method="post" action="update_profile.php">
-                    <div class="form-group">
-                        <label for="newPrenom">Prénom:</label>
-                        <input type="text" id="newPrenom" name="newPrenom" value="<?php echo $prenom; ?>">
-                    </div>
+                    <!-- Edit Form -->
+                    <form method="post" action="update_profile.php">
+                        <div class="form-group">
+                            <label for="newPrenom">Prénom:</label>
+                            <input type="text" id="newPrenom" name="newPrenom" value="<?php echo $prenom; ?>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="newNom">Nom:</label>
-                        <input type="text" id="newNom" name="newNom" value="<?php echo $nom; ?>">
-                    </div>
+                        <div class="form-group">
+                            <label for="newNom">Nom:</label>
+                            <input type="text" id="newNom" name="newNom" value="<?php echo $nom; ?>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="newEmail">Adresse Mail:</label>
-                        <input type="email" id="newEmail" name="newEmail" value="<?php echo $email; ?>">
-                    </div>
+                        <div class="form-group">
+                            <label for="newEmail">Adresse Mail:</label>
+                            <input type="email" id="newEmail" name="newEmail" value="<?php echo $email; ?>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="newPassword">Mot de passe:</label>
-                        <input type="password" id="newPassword" name="newPassword" value="<?php echo $mot_de_passe; ?>">
-                    </div>
+                        <div class="form-group">
+                            <label for="newPassword">Mot de passe:</label>
+                            <input type="password" id="newPassword" name="newPassword" value="<?php echo $mot_de_passe; ?>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="newPhone">Numéro de téléphone:</label>
-                        <input type="text" id="newPhone" name="newPhone" value="<?php echo $numero_de_telephone; ?>">
-                    </div>
+                        <div class="form-group">
+                            <label for="newPhone">Numéro de téléphone:</label>
+                            <input type="text" id="newPhone" name="newPhone" value="<?php echo $numero_de_telephone; ?>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="newCivilite">Civilité:</label>
-                        <input type="text" id="newCivilite" name="newCivilite" value="<?php echo $civilite; ?>">
-                    </div>
+                        <div class="form-group">
+                            <label for="newCivilite">Civilité:</label>
+                            <input type="text" id="newCivilite" name="newCivilite" value="<?php echo $civilite; ?>">
+                        </div>
 
-                    <!-- Add more fields as needed -->
+                        <!-- Add more fields as needed -->
 
-                    <div class="button-group">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
-                    </div>
-                </form>
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
+                        </div>
+                    </form>
             <?php } else { ?>
-                <!-- Display user information -->
+                    <!-- Display user information -->
                 
-                <form method="post" action="update_profile.php">
-                    <div class="form-group1">
-                        <label for="newPrenom">Prénom:</label>
-                        <p> <?php echo $prenom; ?></p>
-                    </div>
+                    <form method="post" action="update_profile.php">
+                        <div class="form-group1">
+                            <label for="newPrenom">Prénom:</label>
+                            <p> <?php echo $prenom; ?></p>
+                        </div>
 
-                    <div class="form-group1">
-                        <label for="newNom">Nom:</label>
-                        <p><?php echo $nom; ?></p>
-                    </div>
+                        <div class="form-group1">
+                            <label for="newNom">Nom:</label>
+                            <p><?php echo $nom; ?></p>
+                        </div>
 
-                    <div class="form-group1">
-                        <label for="newEmail">Adresse Mail:</label>
-                        <p><?php echo $email; ?></p>
+                        <div class="form-group1">
+                            <label for="newEmail">Adresse Mail:</label>
+                            <p><?php echo $email; ?></p>
                         
-                    </div>
+                        </div>
 
-                    <div class="form-group1">
-                        <label for="newPassword">Mot de passe:</label>
-                        <input type="password" id="passwordField" value="<?php echo $mot_de_passe; ?>" disabled>
-                        <button type="button" onclick="togglePasswordVisibility()">Show/Hide</button>
-                    </div>
+                        <div class="form-group1">
+                            <label for="newPassword">Mot de passe:</label>
+                            <input type="password" id="passwordField" value="<?php echo $mot_de_passe; ?>" disabled>
+                            <button type="button" onclick="togglePasswordVisibility()">Show/Hide</button>
+                        </div>
 
-                    <div class="form-group1">
-                        <label for="newPhone">Numéro de téléphone:</label>
-                        <p><?php echo $numero_de_telephone; ?></p>
+                        <div class="form-group1">
+                            <label for="newPhone">Numéro de téléphone:</label>
+                            <p><?php echo $numero_de_telephone; ?></p>
                        
-                    </div>
+                        </div>
 
-                    <div class="form-group1">
-                        <label for="newCivilite">Civilité:</label>
-                        <p><?php echo $civilite; ?></p>
+                        <div class="form-group1">
+                            <label for="newCivilite">Civilité:</label>
+                            <p><?php echo $civilite; ?></p>
                         
-                    </div>
+                        </div>
 
                 
-                <!-- Display other fields as needed -->
-                <a href="profile.php?edit=true" class="btn btn-primary">Edit</a>
+                    <!-- Display other fields as needed -->
+                    <a href="profile.php?edit=true" class="btn btn-primary">Edit</a>
             <?php } ?>
         </div>
     </div>

@@ -24,7 +24,7 @@ if (isset($_POST['email'], $_POST['mot_de_passe'])) {
   $num = mysqli_num_rows($curseur);
 
   // Vérifier si le nom ou le mot de passe existe
-  if($num == 1){
+  if ($num == 1) {
     $row = mysqli_fetch_assoc($curseur);
     $_SESSION['nom'] = $row['nom'];
     $_SESSION['prenom'] = $row['prenom'];

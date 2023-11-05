@@ -62,7 +62,7 @@ body {
     background-color: transparent;
     border-radius: 15px;
     border-color: rgba(138, 138, 138, 0.336);
-    
+
 }
 
 #password {
@@ -73,7 +73,8 @@ body {
 }
 
 .edit-icon {
-    color: #000000; /* Change color as needed */
+    color: #000000;
+    /* Change color as needed */
     cursor: pointer;
     margin-left: 10px;
 }
@@ -92,7 +93,7 @@ body {
     padding: 20px;
     font-family: Arial, sans-serif;
     margin-top: -70px;
-    
+
 }
 
 /* Style the form */
@@ -120,6 +121,7 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 .form-group1 input[type="password"] {
     width: 25%;
     padding: 8px;
@@ -127,8 +129,9 @@ body {
     background-color: transparent;
     font-size: 25px;
     color: #000000;
-    
+
 }
+
 .form-group1 input[type="text"] {
     width: 25%;
     padding: 8px;
@@ -136,8 +139,9 @@ body {
     background-color: transparent;
     font-size: 20px;
     color: black;
-    
+
 }
+
 .form-group1 button {
     background-color: #000000;
     color: #fff;
@@ -159,6 +163,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 3px;
 }
+
 .form-group1 label {
     display: block;
     font-weight: bold;
@@ -201,6 +206,7 @@ body {
     background-color: #c5c5c5;
     color: rgb(0, 0, 0);
 }
+
 .btn-secondary:hover {
     background-color: #d7d7d7;
     color: #000000;
@@ -222,6 +228,6 @@ a:hover {
     text-decoration: underline;
 }
 
-table{
+table {
     margin: auto
 }

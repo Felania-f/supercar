@@ -1,16 +1,16 @@
-body{
-	margin:0px;
-	padding: 0px;
+body {
+    margin: 0px;
+    padding: 0px;
 }
 
-.espace{
+.espace {
     color: white;
     font-size: 30px;
     padding-left: 20%;
     padding-top: 60px;
 }
 
-.texte{
+.texte {
     color: white;
     padding-top: 100px;
     text-align: justify;
@@ -22,4 +22,3 @@ body{
 video {
     padding-top: 100px;
 }
-

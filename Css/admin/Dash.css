@@ -1,65 +1,76 @@
-body{
-   background: linear-gradient(45deg, white, #c5c5c5);
+body {
+  background: linear-gradient(45deg, white, #c5c5c5);
 }
 
 .container {
-   width: 70%;
-   margin: 14% auto;
-   text-align: center;
-   margin-top: -0.5em;
+  width: 70%;
+  margin: 14% auto;
+  text-align: center;
+  margin-top: -0.5em;
 }
 
 .button {
-    border-radius: 25px;
-    background: #ffffff;
-    padding: 20px;
-    width: 175px;
-    height: 118px;
-    border: none;
-    margin-top: 3em;
-    margin-right: 2em;
-    box-shadow: 10px 10px 9px rgb(0 0 0 / 16%);
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 175px;
+  height: 118px;
+  border: none;
+  margin-top: 3em;
+  margin-right: 2em;
+  box-shadow: 10px 10px 9px rgb(0 0 0 / 16%);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .login {
-   position: absolute;
-   top: 0;
-   right: 0;
-   padding: 10px;
-   color: #fff;
-   text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .button:hover {
-   background-color: rgba(255, 255, 255, 0.797); /* Nouvelle couleur de fond en survol */
-   color: #3e3d3d;
-   transform: translateX(5px); /* Déplacer le bouton de 5 pixels vers la droite en survol */
- }
+  background-color: rgba(255, 255, 255, 0.797);
+  /* Nouvelle couleur de fond en survol */
+  color: #3e3d3d;
+  transform: translateX(5px);
+  /* Déplacer le bouton de 5 pixels vers la droite en survol */
+}
 
- .login {
-   display: inline-block;
-   padding: 10px 20px;
-   background-color: #353535; /* Couleur de fond du bouton */
-   color: #fff; /* Couleur du texte du bouton */
-   border-radius: 5px; /* Coins arrondis */
-   text-decoration: none;
-   font-weight: bold;
-   font-size: 15px; /* Taille de la police légèrement plus grande */
-   font-family: monospace; /* Utilisation de la police Arial, avec une police de secours sans-serif */
-   margin: 10px;
-   text-align: center;
-   transition: background-color 0.9s, color 0.9s; /* Transition en douceur pour le changement de couleur */
-   cursor: pointer; /* Curseur de type main (main pointant) */
-   border: none;
- }
- 
- .login:hover {
-   background-color: #7f7f80; /* Couleur de fond du bouton au survol légèrement plus foncée */
-   color: #fff; /* Couleur du texte du bouton au survol */
- }
+.login {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #353535;
+  /* Couleur de fond du bouton */
+  color: #fff;
+  /* Couleur du texte du bouton */
+  border-radius: 5px;
+  /* Coins arrondis */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  /* Taille de la police légèrement plus grande */
+  font-family: monospace;
+  /* Utilisation de la police Arial, avec une police de secours sans-serif */
+  margin: 10px;
+  text-align: center;
+  transition: background-color 0.9s, color 0.9s;
+  /* Transition en douceur pour le changement de couleur */
+  cursor: pointer;
+  /* Curseur de type main (main pointant) */
+  border: none;
+}
 
- a[class*="navbar-brand"]{
-   margin-right: 34em;
- }
+.login:hover {
+  background-color: #7f7f80;
+  /* Couleur de fond du bouton au survol légèrement plus foncée */
+  color: #fff;
+  /* Couleur du texte du bouton au survol */
+}
+
+a[class*="navbar-brand"] {
+  margin-right: 34em;
+}
