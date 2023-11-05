@@ -1,0 +1,38 @@
+.footer-basic {
+    padding:40px 0 !important;
+    background-color:#000000 !important;
+    color:#b7b7b8 !important ;
+    font-family: "Cabin","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  }
+  
+  .footer-basic ul {
+    padding:0 !important;
+    list-style:none !important;
+    text-align:center !important;
+    font-size:18px !important;
+    line-height:1.6 !important;
+    margin-bottom:0 !important;
+  }
+  
+  .footer-basic li {
+    padding:0 10px !important;
+  }
+  
+  .footer-basic ul a {
+    color:inherit !important;
+    text-decoration:none !important;
+    opacity:0.8 !important;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1 !important;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px !important;
+    text-align:right !important;
+    font-size:13px !important;
+    color:#b7b7b8 !important;
+    margin-bottom:0 !important;
+    padding-right: 50px !important;
+  }
