@@ -40,9 +40,5 @@ if (isset($_POST['email'], $_POST['mot_de_passe'])) {
     header("Location:Inscription.php");
     exit();
   }
-
-  // libérer la mémoire
-  mysqli_free_result($curseur);
-  mysqli_close($connexion);
 }
 ?>

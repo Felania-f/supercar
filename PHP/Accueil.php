@@ -6,53 +6,89 @@
         <link rel="stylesheet" href="../Css/Accueil.css">
         <link rel="stylesheet" href="../Css/Navbar.css">
         <link rel="stylesheet" href="../Css/Footer.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        
+        <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+        <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style> 
 
 
     </head>
     <body bgcolor="black">
+    <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
-    <nav>
-        <div class="logo">
-            <a href="../PHP/Accueil.php">
-                <img src="../Image/MicrosoftTeams-image.png" alt="Your Logo">
-            </a>
-        </div>
-        <ul class="menu">
-            <li><a href="../PHP/Accueil.php">Accueil</a></li>
-            <li><a href="../PHP/Voiture.php">Voitures</a></li>
-            <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-            <li><a href="../PHP/evenement.php">Evenements</a></li>
-            <li><a href="../PHP/Contact.php">Contact</a></li>
-        </ul>
-
-                <?php
-                session_start();
-
-                if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
-                    $nom = $_SESSION['nom'];
-                    $prenom = $_SESSION['prenom'];
-                    $idinscription = $_SESSION['idinscription'];
-                    $email = $_SESSION['email'];
-                    echo "<div  class='dropdown'>
-                              <a>$nom $prenom</a>
-                            <div class='dropdown-content'>
-                            <a href='profile.php'>Profil</a>
-                            <a href='deconnexion.php'>Déconnexion</a>
-                            </div>
-                            
-                            </div>";
-                } else {
-                    echo "<div class='login'>
-                            <a href='inscription.php'>Connexion</a>
-                          </div>";
-                }
-
-                ?>
-                
-        </nav>
 
     <div class="overlay">
     <div class="popup">
