@@ -1,0 +1,93 @@
+
+/* Pour ajouter voiture */
+#add_voiture body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#add_voiture header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+#add_voiture .dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+#add_voiture .dropdown a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+#add_voiture .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+#add_voiture .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#add_voiture .section1 {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+#add_voiture .insertion {
+  margin: 10px 0;
+}
+
+#add_voiture label {
+  display: block;
+  font-weight: bold;
+}
+
+#add_voiture input[type="text"],
+#add_voiture input[type="file"] {
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add_voiture input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add_voiture input[type="submit"]:hover {
+  background-color: #555;
+}
+
+#add_voiture .insertion-reussie {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* End ajouter voiture */

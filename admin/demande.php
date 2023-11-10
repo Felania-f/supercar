@@ -26,7 +26,7 @@
         </div>
     </nav>
 
-    <div class="container mt-4" STYLE="margin-right:6.8em;">
+    <div class="container mt-4" STYLE="margin-right:11.8em;">
         <a class="btn btn-primary" href="dash.php">Retour</a>
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="my-4">Gestion - Demandes d'essai
