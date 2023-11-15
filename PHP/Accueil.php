@@ -6,12 +6,54 @@
         <link rel="stylesheet" href="../Css/Accueil.css">
         <link rel="stylesheet" href="../Css/Navbar.css">
         <link rel="stylesheet" href="../Css/Footer.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <?php include 'navbar.php'; ?>
-</head>
-<body bgcolor="black">
+        
+
+
+    </head>
+    <body bgcolor="black">
+
+    <nav>
+                <div class="logo">
+                    <a href="../PHP/Accueil.php">
+                        <img src="../Image/MicrosoftTeams-image.png" alt="Your Logo">
+                    </a>
+                </div>
+                <ul class="menu">
+                  <li><a href="../PHP/Accueil.php">Accueil</a></li>
+                  <li><a href="../PHP/Voiture.php">Voitures</a></li>
+                  <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
+                  <li><a href="../PHP/evenement.php">Evenements</a></li>
+                  <li><a href="../PHP/Contact.php">Contact</a></li>
+                </ul>
+
+                <?php
+                    session_start();
+
+                    if(isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
+                        $nom = $_SESSION['nom'];
+                        $prenom = $_SESSION['prenom'];
+                        $idinscription = $_SESSION['idinscription'];
+                        $email = $_SESSION['email'];
+                        echo "<div  class='dropdown'>
+                              <a>$nom $prenom</a>
+                            <div class='dropdown-content'>
+                            <a href='profile.php'>Profil</a>
+                            <a href='deconnexion.php'>Déconnexion</a>
+                            </div>
+                            
+                            </div>";
+                        } else {
+                            echo "<div class='login'>
+                            <a href='inscription.php'>Connexion</a>
+                          </div>";
+                        }
+                        
+                ?>
+                
+        </nav>
+
     <div class="overlay">
     <div class="popup">
         <h2>Termes et conditions</h2>
@@ -196,23 +238,23 @@
         
     </script>
     <?php
-    // Connect to the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database_name = "supercar";
+        // Connect to the database
+        $servername="localhost";
+        $username="root";
+        $password="";
+        $database_name="supercar";
 
-    $conn = new mysqli($servername, $username, $password, $database_name);
+        $conn = new mysqli($servername, $username, $password, $database_name);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
 
-    // Retrieve cars from database
-    $sql = "SELECT * FROM caroussel ORDER BY id_update DESC LIMIT 1";
-    $result = $conn->query($sql);
-    $acc = mysqli_fetch_assoc($result);
+        // Retrieve cars from database
+        $sql = "SELECT * FROM caroussel ORDER BY id_update DESC LIMIT 1";
+        $result = $conn->query($sql);
+        $acc = mysqli_fetch_assoc($result);
     ?>
 
 
@@ -313,3 +355,4 @@
         <script src="../Java/disconnect.js"></script>
     </body>
 </html>
+

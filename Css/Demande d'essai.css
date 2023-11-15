@@ -1,17 +1,14 @@
-body {
+body{
     margin: 0%;
     padding: 0%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url(../Image/mercedes4.avif);
-    left: 100px;
+    background: url(../Image/mercedes4.avif);left: 100px;
     height: 100vh;
 }
-
-.accueil {
+.accueil{
     margin-top: 3%;
 }
-
-.accueil a {
+.accueil a{
     text-decoration: none;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
@@ -22,17 +19,14 @@ body {
     background-color: rgb(39, 39, 39);
     padding: 10px;
 }
-
-.accueil a:hover {
+.accueil a:hover{
     background-color: rgb(8, 8, 8);
     color: rgb(37, 37, 37);
 }
-
-.accueil a span:hover {
+.accueil a span:hover{
     color: rgb(68, 68, 68);
 }
-
-.reservation {
+.reservation{
     position: absolute;
     top: 55%;
     left: 70%;
@@ -44,25 +38,25 @@ body {
     margin-bottom: 10px;
 }
 
-.reservation h1 {
-    color: rgb(255, 255, 255);
+.reservation h1{
+    color:rgb(255, 255, 255);
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
 
-.reservation form {
+.reservation form{
     padding: 0 40px 100px 40px;
     box-sizing: border-box;
 }
 
-form .insertion {
+form .insertion{
     position: relative;
     border-bottom: 2px solid #505050;
     margin: 30px 0;
 }
 
-.insertion input {
+.insertion input{
     width: 100%;
     padding: 0 5px;
     height: 40px;
@@ -72,7 +66,7 @@ form .insertion {
     outline: none;
 }
 
-.insertion label {
+.insertion label{
     position: absolute;
     top: 50%;
     left: 5px;
@@ -82,15 +76,14 @@ form .insertion {
     pointer-events: none;
     transition: .5s;
 }
-
-.choice select {
-    color: #979797;
-    background-color: rgb(65, 65, 65);
-
+.choice select{
+   color:#979797; 
+   background-color: rgb(65, 65, 65);
+   
 }
 
 
-.insertion span::before {
+.insertion span::before{
     content: '';
     position: absolute;
     top: 40px;
@@ -101,25 +94,25 @@ form .insertion {
     transition: .5s;
 }
 
-.insertion input:focus~label,
-.insertion input:valid~label {
+.insertion input:focus ~ label,
+.insertion input:valid ~ label{
     top: 0%;
     color: #e7e5e5;
 }
 
-.insertion input:focus~span::before,
-.insertion input:valid~span::before {
+.insertion input:focus ~ span::before,
+.insertion input:valid ~ span::before{
     width: 100%;
 }
 
-form .andro {
+form .andro{
     width: 135px;
     position: relative;
     border-bottom: 2px solid #958787;
     margin: 50px 0px;
 }
 
-.andro input {
+.andro input{
     width: auto;
     color: #958787;
     padding: 0 5px;
@@ -130,7 +123,7 @@ form .andro {
     outline: none;
 }
 
-.andro label {
+.andro label{
     position: absolute;
     top: -5px;
     left: 5px;
@@ -141,7 +134,7 @@ form .andro {
     transition: .5s;
 }
 
-.andro span::before {
+.andro span::before{
     content: '';
     position: absolute;
     top: 40px;
@@ -152,25 +145,25 @@ form .andro {
     transition: .5s;
 }
 
-.andro input:focus~label,
-.andro input:valid~label {
+.andro input:focus ~ label,
+.andro input:valid ~ label{
     top: -7%;
     color: #e4e4e4;
 }
 
-.andro input:focus~span::before,
-.andro input:valid~span::before {
+.andro input:focus ~ span::before,
+.andro input:valid ~ span::before{
     width: 100%;
 }
 
-form .ora {
+form .ora{
     width: 150px;
     position: relative;
     border-bottom: 2px solid #958787;
     margin: 50px 0;
 }
 
-.ora input {
+.ora input{
     width: auto;
     color: #958787;
     padding: 0 5px;
@@ -181,7 +174,7 @@ form .ora {
     outline: none;
 }
 
-.ora label {
+.ora label{
     position: absolute;
     top: -5px;
     left: 5px;
@@ -192,7 +185,7 @@ form .ora {
     transition: .5s;
 }
 
-.ora span::before {
+.ora span::before{
     content: '';
     position: absolute;
     top: 40px;
@@ -203,18 +196,18 @@ form .ora {
     transition: .5s;
 }
 
-.ora input:focus~label,
-.ora input:valid~label {
+.ora input:focus ~ label,
+.ora input:valid ~ label{
     top: -7%;
     color: #bbbbbb;
 }
 
-.ora input:focus~span::before,
-.ora input:valid~span::before {
+.ora input:focus ~ span::before,
+.ora input:valid ~ span::before{
     width: 100%;
 }
 
-input[type="submit"] {
+input[type="submit"]{
     position: absolute;
     left: 40%;
     width: 150px;
@@ -229,20 +222,20 @@ input[type="submit"] {
     outline: none;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover{
     border-color: rgb(112, 110, 106);
     transition: .5s;
     background-color: rgb(92, 89, 89);
     color: white;
 }
 
-.nb {
+.nb{
     position: absolute;
     margin-top: 65px;
     margin-left: 130px;
     font-style: italic;
     font-weight: 500;
-    color: gray
+    color:gray
 }
 
 .choix {

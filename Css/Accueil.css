@@ -4,15 +4,12 @@
   margin: auto;
   padding-top: 100px;
 }
-
 .mySlides {
   display: none;
   width: 100%;
   height: auto;
 }
-
-.prev,
-.next {
+.prev, .next {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
@@ -25,28 +22,25 @@
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
-
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-.prev:hover,
-.next:hover {
+.prev:hover, .next:hover {
   background-color: #000000
 }
 
 .section1 {
   background-image: url('Image/AMG.jpg');
-  background-size: cover;
+	background-size: cover;
 }
 
-table {
+table{
   margin: auto;
 }
 
 th {
-  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Cabin","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 28px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -57,7 +51,7 @@ th {
 }
 
 p {
-  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 26px;
   font-size: 20px;
 }
@@ -84,8 +78,7 @@ p {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  /* Valeur z-index élevée pour placer le pop-up devant le diaporama */
+  z-index: 9999; /* Valeur z-index élevée pour placer le pop-up devant le diaporama */
 }
 
 .popup {
@@ -93,14 +86,12 @@ p {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  max-height: 300px;
-  /* Ajustez la hauteur maximale souhaitée */
+  max-height: 300px; /* Ajustez la hauteur maximale souhaitée */
   overflow-y: auto;
 }
 
 .popup .scroll-container {
-  max-height: calc(200px);
-  /* Ajustez la hauteur en fonction de la taille de la popup */
+  max-height: calc(200px); /* Ajustez la hauteur en fonction de la taille de la popup */
   max-width: calc(600px);
   overflow-y: auto;
 }
@@ -127,3 +118,4 @@ p {
   color: #fff;
   border: none;
 }
+

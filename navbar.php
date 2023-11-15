@@ -1,8 +1,7 @@
 <?php
-session_start();
-?>
-
-<script>
+//session_start();
+//?>
+<!--<script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -112,8 +111,7 @@ session_start();
     <a href="../PHP/Contact.php" id="Events" style="margin-right: 2em;">Contact</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
-    </a>
-
+    </a>-->
     <?php
     if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
         $nom = $_SESSION['nom'];
@@ -127,8 +125,8 @@ session_start();
             </div>";
     } else {
         echo "<div class='login'>
-                <a href='inscription.php'>Connexion</a>
+                <a href='inscription.php' style='margin-top: 1em;'>Connexion</a>
             </div>";
     }
     ?>
-</div>
+</div> 
