@@ -24,7 +24,7 @@
             <li><a href="../PHP/Accueil.php">Accueil</a></li>
             <li><a href="../PHP/Voiture.php">Voitures</a></li>
             <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-            <li><a href="../PHP/evenement.php">Événements</a></li>
+            <li><a href="../PHP/evenement.php">Évènements</a></li>
             <li><a href="../PHP/Contact.php">Contact</a></li>
         </ul>
 
@@ -153,11 +153,11 @@
                     <span></span>
                     <label>Date de début</label>
                 </div>
-                <div class="andro">
+                <!-- <div class="andro">
                     <input type="date" name="date2" required>
                     <span></span>
                     <label>Date de fin</label>
-                </div>
+                </div> -->
                 <div class="ora">
                     <input type="time" name="heure1" required>
                     <span></span>

@@ -26,7 +26,7 @@
                   <li><a href="../PHP/Accueil.php">Accueil</a></li>
                   <li><a href="../PHP/Voiture.php">Voitures</a></li>
                   <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-                  <li><a href="../PHP/evenement.php">Événements</a></li>
+                  <li><a href="../PHP/evenement.php">Évènements</a></li>
                   <li><a href="../PHP/Contact.php">Contact</a></li>
                 </ul>
 
