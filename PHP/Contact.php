@@ -26,7 +26,7 @@
                   <li><a href="../PHP/Accueil.php">Accueil</a></li>
                   <li><a href="../PHP/Voiture.php">Voitures</a></li>
                   <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-                  <li><a href="../PHP/evenement.php">Evenements</a></li>
+                  <li><a href="../PHP/evenement.php">Événements</a></li>
                   <li><a href="../PHP/Contact.php">Contact</a></li>
                 </ul>
 
@@ -156,7 +156,7 @@ mysqli_close($bdd);
 
                     <li><a href="Privacy.html">Politique de Confidentialité</a></li>
 
-                    <li><a href="mentionlegale.html">Mention légale</a></li>
+                    <li><a href="../HTML/mentionlegale.html">Mention légale</a></li>
 
                 </UL>
 

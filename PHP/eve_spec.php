@@ -128,7 +128,7 @@
 
                     <li><a href="Privacy.html">Politique de Confidentialité</a></li>
 
-                    <li><a href="mentionlegale.html">Mention légale</a></li>
+                    <li><a href="../HTML/mentionlegale.html">Mention légale</a></li>
 
                 </UL>
 
