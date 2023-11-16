@@ -138,7 +138,7 @@
                 <div class="form-group">
                     <label for="Image">Changer image</label>
                     <!-- Add an input field for file selection -->
-                    <input type="file" id="Image" name="Image" accept=".jpg, .jpeg, .png"
+                    <input type="file" id="Image" name="Image" accept=".jpg, .jpeg, .png, .webp"
                         onchange="previewImage(this);">
                     <!-- Add an <img> tag for image preview -->
                     <img id="imagePreview" src="<?php echo $Image; ?>" alt="Image Preview" width="250">

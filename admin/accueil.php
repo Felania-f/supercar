@@ -180,7 +180,7 @@
                                     <?php echo $i; ?>
                                 </label><br>
                                 <input type="file" id="image<?php echo $i; ?>" name="image<?php echo $i; ?>"
-                                    accept=".jpg, .jpeg, .png" onchange="previewImage<?php echo $i; ?>(this);">
+                                    accept=".jpg, .jpeg, .png, .webp" onchange="previewImage<?php echo $i; ?>(this);">
                                 <img class="carousel-image" src="<?php echo ${"image" . $i}; ?>" alt="Image Preview"
                                     width="100">
                             </div>
@@ -205,14 +205,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="image_apdn">Image pour à propos de nous 1:</label><br>
-                                    <input type="file" id="image_apdn" name="image_apdn" accept=".jpg, .jpeg, .png"
+                                    <input type="file" id="image_apdn" name="image_apdn" accept=".jpg, .jpeg, .png, .webp"
                                         onchange="previewImage6(this);">
                                     <img class="carousel-image" src="<?php echo $image_apdn; ?>" alt="Image Preview"
                                         width="100">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="image_apdn1">Image pour à propos de nous 2:</label><br>
-                                    <input type="file" id="image_apdn1" name="image_apdn1" accept=".jpg, .jpeg, .png"
+                                    <input type="file" id="image_apdn1" name="image_apdn1" accept=".jpg, .jpeg, .png, .webp"
                                         onchange="previewImage7(this);">
                                     <img class="carousel-image" src="<?php echo $image_apdn1; ?>" alt="Image Preview"
                                         width="100">

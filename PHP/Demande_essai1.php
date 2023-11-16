@@ -163,7 +163,7 @@
     <section class="section1">
         <div class="reservation">
             <h1>Demande d'essai</h1>
-            <div class="choice">
+            <div class="choice" style="margin-top: 2em;">
                 <label for="modele"
                     style="color:rgb(146, 142, 142)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modèle
                     :</label>
@@ -183,7 +183,7 @@
                 <div class="andro">
                     <input type="date" name="date1" required>
                     <span></span>
-                    <label>Date de début</label>
+                    <label>Date</label>
                 </div>
                 <div class="andro">
                     <input type="date" name="date2" required>
