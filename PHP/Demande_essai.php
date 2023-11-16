@@ -132,12 +132,23 @@
     <section class="section1">
         <div class="reservation">
             <h1>Demande d'essai</h1>
+            <?php
+        if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
+            $nom = $_SESSION['nom'];
+            $prenom = $_SESSION['prenom'];
+            $idinscription = $_SESSION['idinscription'];
+            $email = $_SESSION['email'];
+            echo "<div class='dropdown'>
+                     <a>$nom $prenom</a>
+                  </div>";
+        }
+        ?>
             <div class="choice">
                 <label for="modele"
                     style="color:rgb(146, 142, 142)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modèle
                     :</label>
                 <a href="../PHP/Voiture.php">
-                    <button class="choix" value="choice" required>Choisissez un modèle</button>
+                    <button class="choix" value="choice" style='margin-top: -2em;' required>Choisissez un modèle</button>
                 </a>
 
             </div>
