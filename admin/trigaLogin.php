@@ -34,24 +34,22 @@
         </div>
     </nav>
     <div class="container mt-4">
-        <a class="btn btn-primary back-button" href="dash.php">Retour</a>
-        <a class="btn btn-primary back-button" href="trigaLogin.php">Historique de connexion</a>
+        <a class="btn btn-primary back-button" href="utilisateur.php">Retour</a>
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="my-4">Gestion des utilisateurs</h1>
-            <a class="btn btn-primary" href="add_utilisateur.php">
-                <i class="fas fa-plus"></i> Ajouter utilisateur
-            </a>
+            <h1 class="my-4">Gestion des contacts</h1>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped" style="text-align: center;">
             <thead>
-                <tr class="custom-header-row">
-                    <th class="email">E-mail/Username</th>
-                    <th class="mot_de_passe">Mot de Passe</th>
-                    <th class="mot_de_passe">Actions</th>
+                <tr>
+                    <th class="id_contact">ID</th>
+                    <th class="Nom_Prenom">E-mail</th>
+                    <th class="email_contact">Authentification</th>
+                    <th class="message">Date et heure de connexion</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
+                // Change these variables to match your database configuration
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -66,17 +64,20 @@
                 }
 
                 // Query the database
-                $sql = "SELECT * FROM admin_connexion";
+                $sql = "SELECT * FROM loginmonitor";
                 $result = mysqli_query($conn, $sql);
-
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
+                    echo "<td class='id'>" . $row["id"] . "</td>";
                     echo "<td class='email'>" . $row["email"] . "</td>";
-                    $mot_de_passe = $row["mot_de_passe"];
-                    $mot_de_passe_masque = $mot_de_passe;
-                    echo "<td class='mot_de_passe'>" . $mot_de_passe_masque . "</td>";
-                    // echo "<td class='actions'><a href='edit_utilisateur.php?id_adminconnexion=" . $row["id_adminconnexion"] . "'>Afficher</a> | <a href='delete_util.php?id_adminconnexion=" . $row["id_adminconnexion"] . "'>Supprimer</a></td>";
-                    echo "<td><a href='edit_utilisateur.php?id_adminconnexion=" . $row["id_adminconnexion"] . "'><i class='fas fa-edit'></i></a>&ensp;<a href='delete_util.php?id_adminconnexion=" . $row["id_adminconnexion"] . "'><i class='fas fa-trash-alt' onclick='return confirm(\"Etes vous sûre de vouloir supprimer la demande?\");'></i></a></td></tr>";
+                    echo "<td class='success'>" . $row["success"] . "</td>";
+                    echo "<td class='connectionDate'>" . $row["connectionDate"] . "</td>";
+                    // echo "<td>" . substr($row["message"], 0, 30);
+                    // if (strlen($row["message"]) > 30) {
+                    //     echo "...";
+                    // }
+                    // echo "</td>";
+                    // echo "<td><a href='edit_contact.php?idcontact=" . $row["idcontact"] . "'><i class='fas fa-edit'></i></a>&ensp;<a href='delete_contact.php?idcontact=" . $row["idcontact"] . "'><i class='fas fa-trash-alt' onclick='return confirm(\"Etes vous sûre de vouloir supprimer la demande?\");'></i></a></td></tr>";
                     echo "</tr>";
                 }
                 // Close connection
