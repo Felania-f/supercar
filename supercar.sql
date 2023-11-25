@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 04 nov. 2023 à 09:43
--- Version du serveur : 10.4.28-MariaDB
+-- Généré le : sam. 25 nov. 2023 à 16:35
+-- Version du serveur : 11.1.3-MariaDB
 -- Version de PHP : 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -39,7 +39,8 @@ CREATE TABLE `admin_connexion` (
 
 INSERT INTO `admin_connexion` (`id_adminconnexion`, `email`, `mot_de_passe`) VALUES
 (54, 'aaaa@gmail.c9om', '5ca168e44ea0f056fa0c42850fa54767e0c1f997'),
-(57, 'felaniaina@admin.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220');
+(57, 'felaniaina@admin.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
+(69, 'felaniaina71@gmail.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ CREATE TABLE `caroussel` (
 --
 
 INSERT INTO `caroussel` (`id_update`, `image1`, `image2`, `image3`, `image4`, `image5`, `apdn`, `apdn1`, `image_apdn`, `image_apdn1`) VALUES
-(1, '../Image/41-410044_download-wallpaper-hd-pc.jpg', '../Image/Capture d\'écran 2023-10-10 101544.png', '../Image/Capture d\'écran 2023-10-12 201918.png', '../Image/Capture d\'écran 2023-10-12 203555.png', '../Image/1series.jpg', ' automobiles 2023 proches de chez vous en quelques secondes. En utilisant le filtre ci-dessous trouvez une multitude d’événements, Bourse d’échange, journée circuit rassemblements, dans votre région ou même dans votre ville ! Si vous êtes organisateur, n’attendez plus faites-vous connaître auprès des passionnés automobiles.', 'ouvrez les événementautomobiles 2023 proches de chez vous en quelques secondes. En utilisant le filtre ci-dessous trouvez une multitude d’événements, Bourse d’échange, journée circuit rassemblements, dans votre région ou même dans votre ville ! Si vous êtes organisateur, n’attendez plus faites-vous connaître auprès des passionnés autom', '../Image/1series.jpg', '../Image/41-410044_download-wallpaper-hd-pc.jpg');
+(1, '../Image/AMG.webp', '../Image/Huracan.webp', '../Image/Hellcat.webp', '../Image/Evo.webp', '../Image/Ford.webp', ' automobiles 2023 proches de chez vous en quelques secondes. En utilisant le filtre ci-dessous trouvez une multitude d’événements, Bourse d’échange, journée circuit rassemblements, dans votre région ou même dans votre ville ! Si vous êtes organisateur, n’attendez plus faites-vous connaître auprès des passionnés automobiles.', 'ouvrez les événementautomobiles 2023 proches de chez vous en quelques secondes. En utilisant le filtre ci-dessous trouvez une multitude d’événements, Bourse d’échange, journée circuit rassemblements, dans votre région ou même dans votre ville ! Si vous êtes organisateur, n’attendez plus faites-vous connaître auprès des passionnés autom', '../Image/dealer.jpg', '../Image/mercedes.webp');
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,8 @@ CREATE TABLE `demande` (
 
 INSERT INTO `demande` (`ID_demande`, `idinscription`, `nom`, `prenom`, `email`, `Id_Voiture`, `marque`, `modele`, `details`, `date1`, `date2`, `heure1`, `heure2`, `Statuts1`) VALUES
 (40, '540', 'loto', 'zean mari', 'zeanmari@gmail.com', '1', 'ford', 'raptor', 'ehhhhh', '2023-11-20', '2023-11-24', '23:00:00', '00:00:00', 'Confirmé'),
-(41, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '2', 'Ford', 'Raptor F-150', 'adaweadaw', '2023-11-07', '2023-11-28', '12:08:00', '17:08:00', 'En cours');
+(41, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '2', 'Ford', 'Raptor F-150', 'adaweadaw', '2023-11-07', '2023-11-28', '12:08:00', '17:08:00', 'Terminé'),
+(42, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-11-01', '2023-11-02', '11:58:00', '13:58:00', 'En cours');
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,7 @@ CREATE TABLE `evenement` (
 --
 
 INSERT INTO `evenement` (`id_eve`, `Video`, `Image`, `Petit_txt`, `Petit_titre`, `Texte`, `Titre`) VALUES
-(1, '../Video/4x4.mp4', '../Image/41-410044_download-wallpaper-hd-pc.jpg', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des ', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des voitures de ', 'Supercar est heureux de partager avec vous le retour sur le concours de tuning de 4x4, une rencontre unique qui a rassemblé les passionnés de tout-terrain et de voitures modifiées. Cet événement a été l\'occasion pour les visiteurs de découvrir les dernières tendances en matière de tuning 4x4, avec des véhicules impressionnants qui ont su attirer l\'attention de tous les participants.\r\n<br><br>\r\nLe concours a eu lieu dans un endroit exceptionnel, où les visiteurs ont pu admirer les véhicules les plus puissants et les plus impressionnants du moment. Les propriétaires des 4x4 ont présenté leur véhicule avec fierté, montrant les modifications effectuées pour améliorer les performances et l\'apparence de leurs voitures.\r\n<br><br>\r\nLes participants ont été jugés sur différents critères, notamment l\'esthétique, la puissance et la qualité des modifications. Les véhicules les plus impressionnants ont attiré l\'attention des visiteurs, qui ont pu discuter avec les propriétaires pour', 'Concours de tuning de'),
+(1, '../Video/4x4.mp4', '../Image/supercar meet.jpg', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des ', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des voitures de ', 'Supercar est heureux de partager avec vous le retour sur le concours de tuning de 4x4, une rencontre unique qui a rassemblé les passionnés de tout-terrain et de voitures modifiées. Cet événement a été l\'occasion pour les visiteurs de découvrir les dernières tendances en matière de tuning 4x4, avec des véhicules impressionnants qui ont su attirer l\'attention de tous les participants.\r\n<br><br>\r\nLe concours a eu lieu dans un endroit exceptionnel, où les visiteurs ont pu admirer les véhicules les plus puissants et les plus impressionnants du moment. Les propriétaires des 4x4 ont présenté leur véhicule avec fierté, montrant les modifications effectuées pour améliorer les performances et l\'apparence de leurs voitures.\r\n<br><br>\r\nLes participants ont été jugés sur différents critères, notamment l\'esthétique, la puissance et la qualité des modifications. Les véhicules les plus impressionnants ont attiré l\'attention des visiteurs, qui ont pu discuter avec les propriétaires pour', 'Concours de tuning de'),
 (2, '../Video/car meet.mp4', '../Image/703e3aefd9500eff0f63294bc383ac2a.jpeg', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des voitures de lu', 'Des passionnés d\'automobiles venus de différentes régions du pays se rassemblent pour admirer des voitures de lu\r\n  ', '    Supercar est fier de partager avec vous l\'un des événements automobiles les plus attendus de l\'année, qui a rassemblé des amateurs de voitures des quatre coins du pays pour une rencontre exceptionnelle. Cette occasion unique a permis à des passionnés de l\'automobile de se rencontrer, d\'échanger et de découvrir les dernières nouveautés en matière de voitures de prestige.\r\n    <br><br>\r\n    L\'événement a eu lieu dans un lieu prestigieux où les visiteurs ont pu admirer les voitures les plus exclusives et les plus impressionnantes du moment. Des représentants de Supercar étaient présents pour répondre aux questions des visiteurs et pour partager leur expertise en matière de voitures de luxe.\r\n    <br><br>\r\n    Les voitures exposées étaient toutes plus impressionnantes les unes que les autres, avec des designs innovants et des performances époustouflantes. Les visiteurs ont pu admirer les derniers modèles de Supercar, ainsi que d\'autres marques prestigieuses telles que Ferrari, ', 'Rencontre de voitures de prest'),
 (3, '..\\Video\\bmw showroom.mp4', '../Image/986511508d24fa199cd44f5176eefb8d.jpeg', 'Retour sur notre showroom exceptionnel en collaboration avec BMW', 'Retour sur notre showroom exceptionnel en collaboration avec BMW\r\n', '    Nous avons récemment eu l\'opportunité de collaborer avec BMW pour organiser un showroom exceptionnel. Cet événement a été l\'occasion pour les amateurs de voitures de découvrir les dernières innovations en matière de voitures de luxe.\r\n    <br><br>\r\n    Le showroom s\'est tenu dans un lieu prestigieux, où les visiteurs ont pu admirer les derniers modèles de BMW. Les deux marques ont présenté une sélection de voitures sophistiquées, élégantes et performantes, qui ont attiré l\'attention des visiteurs dès leur arrivée. \r\n    <br><br>\r\n    Les représentants de Supercar et BMW étaient présents tout au long de l\'événement pour répondre aux questions des visiteurs et leur fournir des informations détaillées sur les caractéristiques et les fonctionnalités des véhicules présentés. \r\n    <br><br>\r\n    Les visiteurs ont été particulièrement impressionnés par la qualité de la présentation, qui mettait en valeur la beauté et l\'excellence des voitures exposées. Les designs modernes et élégants de ', 'Showroom BMW\r\n');
 
@@ -214,18 +216,9 @@ CREATE TABLE `loginmonitor` (
 --
 
 INSERT INTO `loginmonitor` (`id`, `email`, `success`, `connectionDate`) VALUES
-(1, 'felaniaina@admin.comddsr', 0, '0000-00-00 00:00:00'),
-(2, 'felaniaina@admin.comcfgcfg', 0, '0000-00-00 00:00:00'),
-(3, 'felaniaina@admin.com', 0, '0000-00-00 00:00:00'),
-(4, 'felaniaina@admin.csersom', 0, '0000-00-00 00:00:00'),
-(5, 'felaniaina@admin.comsers', 0, '0000-00-00 00:00:00'),
-(6, 'felaniaina@admin.com324', 0, '0000-00-00 00:00:00'),
-(7, 'felaniaina@admin.com', 0, '2023-11-04 00:00:00'),
-(8, 'felaniaina@admin.com', 1, '2023-11-04 00:00:00'),
-(9, 'felaniaina@admin.casewaeom', 0, '2023-11-04 00:00:00'),
-(10, 'felaniaina@admin.com', 1, '2023-11-04 00:00:00'),
-(11, 'felaniaina@admin.com', 0, '2023-11-04 12:10:54'),
-(12, 'felaniaina@admin.com', 1, '2023-11-04 12:11:03');
+(20, 'felaniaina@admin.com', 1, '2023-11-20 10:56:30'),
+(22, 'felaniaina@admin.com', 1, '2023-11-20 11:10:33'),
+(23, 'felaniaina@admin.com', 1, '2023-11-20 11:41:49');
 
 -- --------------------------------------------------------
 
@@ -249,8 +242,8 @@ CREATE TABLE `voiture` (
 --
 
 INSERT INTO `voiture` (`Id_Voiture`, `Marque`, `Modele`, `idcategorie`, `Annee`, `Specification`, `Prix`, `Image`) VALUES
-(1, 'Mercedes', 'iii', '4x4', '2015', 'a Mercedes AMG GT S est une voiture de sport haute performance qui a été introduite en 2017. Elle est équipée d\'un moteur V8 biturbo de 4,0 litres qui développe une puissance de 585 chevaux et un couple de 700 Nm. Elle peut accélérer de 0 à 100 km/h en seulement 3,6 secondes et atteindre une vitesse maximale de 318 km/h. La voiture dispose également d\'un système de suspension adaptative, d\'un aérodynamisme optimisé, d\'un système de freinage en céramique et d\'un intérieur de ', '120 680$', '../Image/703e3aefd9500eff0f63294bc383ac2a.jpeg'),
-(2, 'Ford', 'Raptor F-150', '4x4', '2020', ' Ford Raptor F-150 2020 est un camion tout-terrain haut de gamme conçu pour les aventuriers qui cherchent à explorer la nature sauvage. Elle est équipée d\'un moteur V6 biturbo de 3,5 litres qui produit 450 chevaux et 510 lb-pi de couple, couplé à une transmission automatique à 10 vitesses. Elle dispose d\'une suspension haute performance qui offre une conduite confortable même sur les terrains les plus accidentés, ainsi que de pneus tout-terrain pour une traction maximale.', '50 700 €', '../Image/703e3aefd9500eff0f63294bc383ac2a.jpeg'),
+(1, 'Mercedes AMG GT', 'Mercedes', 'SUV', '2015', 'La Mercedes AMG GT S est une voiture de sport haute performance qui a été introduite en 2017. Elle est équipée d\'un moteur V8 biturbo de 4,0 litres qui développe une puissance de 585 chevaux et un couple de 700 Nm. Elle peut accélérer de 0 à 100 km/h en seulement 3,6 secondes et atteindre une vitesse maximale de 318 km/h. La voiture dispose également d\'un système de suspension adaptative, d\'un aérodynamisme optimisé, d\'un système de freinage en céramique.', '120 680$', '../Image/mercedes.jpg'),
+(2, 'Ford', 'Raptor F-150', '4x4', '2020', ' Ford Raptor F-150 2020 est un camion tout-terrain haut de gamme conçu pour les aventuriers qui cherchent à explorer la nature sauvage. Elle est équipée d\'un moteur V6 biturbo de 3,5 litres qui produit 450 chevaux et 510 lb-pi de couple, couplé à une transmission automatique à 10 vitesses. Elle dispose d\'une suspension haute performance qui offre une conduite confortable même sur les terrains les plus accidentés, ainsi que de pneus tout-terrain pour une traction maximale.', '50 700 €', '../Image/Ford.webp'),
 (3, 'Dodge', 'Challenger SRT Hellcat', 'Sport', '2020', 'Challenger Hellcat 2020 est une voiture de sport américaine emblématique avec un design agressif et une performance incroyable. Voici quelques-unes de ses spécifications clés:Moteur: V8 suralimenté de 6,2 litres produisant 717 chevaux et 650 lb-pi de coupleTransmission: Boîte de vitesses automatique à huit rapportsAccélération: 0 à 60 mph en environ 3,6 secondesVitesse de pointe: 320 km/hFreins: Freins à disque Brembo hautes performancesSuspensions: Suspension adaptative à trois modesIntérieur: Sièges sport en cuir, écran tactile de 8,4 pouces avec système d\'infodivertissement Uconnect, système audio Harman Kardon à 18 haut-parleurs', '57 1990 €', 'waouh.jpg'),
 (4, 'Mitsubishi', 'Lancer Evolution IX', 'Sport', '2008', 'Voici quelques spécifications pour la Mitsubishi Lancer Evolution IX, qui était produite de 2005 à 2007 :Moteur: 2,0 litres turbocharged (4G63) inline 4Puissance: 280 chevauxCouple: 400 NmTransmission: boîte manuelle à 6 vitessesPoids: environ 1 430 kgAccélération de 0 à 100 km/h: environ 5,2 secondesVitesse maximale: environ 250 km/hSystème de transmission intégrale (AWD) avec différentiel central actif (ACD) et différentiel arrière actif (AYC)Suspension avant: jambes de force MacPhersonSuspension arrière: multibras indépendanteFreins avant: disques ventilés de 320 mm avec étriers Brembo à 4 pistonsFreins arrière: disques ventilés de 300 mm avec étriers Brembo à 2 pistonsCeci n\'est pas une liste exhaustive de toutes les spécifications de la Mitsubishi Lancer Evolution IX, mais cela vous donne une idée générale de ses caractéristiques principales.', '40 050 €', '../Image/dealer.jpg'),
 (5, 'Lamborghini', 'Huracan Evo', 'Sport', '2021', 'La Lamborghini Huracán EVO 2021 est une voiture de sport haut de gamme qui offre des performances exceptionnelles et une esthétique saisissante. Elle est équipée d\'un moteur V10 de 5,2 litres qui développe une puissance de 640 chevaux, capable de propulser la voiture de 0 à 100 km/h en seulement 2,9 secondes. Elle dispose également d\'une transmission intégrale et d\'une suspension active pour une tenue de route optimale. La Lamborghini Huracán EVO 2021 est équipée d\'une transmission automatique à double embrayage à sept rapports, offrant des changements de vitesse rapides et fluides. Elle possède également un système de direction à assistance électrique pour une précision de conduite accrue.', '191 750 €', '../Image/1series.jpg'),
@@ -339,7 +332,7 @@ ALTER TABLE `voiture`
 -- AUTO_INCREMENT pour la table `admin_connexion`
 --
 ALTER TABLE `admin_connexion`
-  MODIFY `id_adminconnexion` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id_adminconnexion` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT pour la table `caroussel`
@@ -357,7 +350,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT pour la table `demande`
 --
 ALTER TABLE `demande`
-  MODIFY `ID_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `ID_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `essai`
@@ -381,7 +374,7 @@ ALTER TABLE `inscription`
 -- AUTO_INCREMENT pour la table `loginmonitor`
 --
 ALTER TABLE `loginmonitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pour la table `voiture`
