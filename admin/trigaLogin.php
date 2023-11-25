@@ -37,6 +37,8 @@
         <a class="btn btn-primary back-button" href="utilisateur.php">Retour</a>
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="my-4">Gestion des contacts</h1>
+            Filter Date<input type="date" id="dateFilter"> </input>
+            <input type="submit" id="resetFilter" value="Show All"> </input>
         </div>
         <table class="table table-striped" style="text-align: center;">
             <thead>
@@ -65,6 +67,9 @@
 
                 // Query the database
                 $sql = "SELECT * FROM loginmonitor";
+                if (isset($_GET['filterDate'])) {
+                    $sql = "SELECT * FROM loginmonitor WHERE connectionDate LIKE '%" . $_GET['filterDate'] . "%'";
+                }
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
@@ -89,6 +94,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('dateFilter').addEventListener('change', function() {
+            window.location.href = "/Supercar/SuperCar/admin/trigaLogin.php?filterDate=" + document.getElementById('dateFilter').value
+        });
+        document.getElementById('resetFilter').addEventListener('click', function() {
+            window.location.href = "/Supercar/SuperCar/admin/trigaLogin.php"
+        });
+    </script>
 </body>
 
 </html>
