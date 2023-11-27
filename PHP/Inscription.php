@@ -144,27 +144,31 @@
     die("Connexion à la base de données a échoué: " . mysqli_connect_error());
   }
 
-  // Vérifier si le formulaire a été soumis
-  if (isset($_POST['prenom'], $_POST['nom'], $_POST['email'], $_POST['mot_de_passe'], $_POST['numero_de_telephone'], $_POST['civilite'])) {
-    // Les données ont été soumises
-    $prenom = mysqli_real_escape_string($connexion, $_POST['prenom']);
-    $nom = mysqli_real_escape_string($connexion, $_POST['nom']);
-    $email = mysqli_real_escape_string($connexion, $_POST['email']);
-    $mot_de_passe = mysqli_real_escape_string($connexion, $_POST['mot_de_passe']);
-    $numero_de_telephone = mysqli_real_escape_string($connexion, $_POST['numero_de_telephone']);
-    $civilite = mysqli_real_escape_string($connexion, $_POST['civilite']);
+// Vérifier si le formulaire d'inscription a été soumis
+if (isset($_POST['prenom'], $_POST['nom'], $_POST['email'], $_POST['mot_de_passe'], $_POST['numero_de_telephone'], $_POST['civilite'])) {
+  // Les données ont été soumises
+  $prenom = mysqli_real_escape_string($connexion, $_POST['prenom']);
+  $nom = mysqli_real_escape_string($connexion, $_POST['nom']);
+  $email = mysqli_real_escape_string($connexion, $_POST['email']);
+  $mot_de_passe = mysqli_real_escape_string($connexion, $_POST['mot_de_passe']);
+  $numero_de_telephone = mysqli_real_escape_string($connexion, $_POST['numero_de_telephone']);
+  $civilite = mysqli_real_escape_string($connexion, $_POST['civilite']);
 
-    // Insérer les données dans la base de données
-    $query = "INSERT INTO inscription (prenom, nom, email, mot_de_passe, numero_de_telephone, civilite)
-            VALUES ('$prenom', '$nom', '$email', '$mot_de_passe', '$numero_de_telephone', '$civilite')";
-    if (mysqli_query($connexion, $query)) {
+  // Obtenir la date et l'heure actuelles
+  $date_inscription = date('Y-m-d H:i:s');
+
+  // Insérer les données dans la table "inscriptionmonitor"
+  $query = "INSERT INTO inscriptionmonitor (prenom, nom, email, date_inscription)
+          VALUES ('$prenom', '$nom', '$email', '$date_inscription')";
+
+  if (mysqli_query($connexion, $query)) {
       // Rediriger l'utilisateur vers une autre page en cas d'inscription réussie
       header("Location:Accueil.php");
       exit();
-    } else {
+  } else {
       echo "Erreur d'insertion de données: " . mysqli_error($connexion);
-    }
   }
+}
 
   ?>
 
