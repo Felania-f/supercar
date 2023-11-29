@@ -35,6 +35,7 @@
         <a href="voiture.php"><button class="button">Voitures</button></a><br>
         <a href="demande.php"><button class="button">Demande D'essai</button></a>
         <a href="utilisateur.php"><button class="button">Utilisateurs</button></a>
+        <a href="visiteur.php"><button class="button">Visiteurs</button></a>
     </div>
 </body>
 
