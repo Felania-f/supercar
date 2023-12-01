@@ -132,27 +132,17 @@
 
 
   <?php
-  $host = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "supercar";
-
-  // Etablir une connexion avec la base de données
-  $connexion = mysqli_connect($host, $username, $password, $database);
-
-  if (!$connexion) {
-    die("Connexion à la base de données a échoué: " . mysqli_connect_error());
-  }
+include('db_connection.php');
 
 // Vérifier si le formulaire d'inscription a été soumis
 if (isset($_POST['prenom'], $_POST['nom'], $_POST['email'], $_POST['mot_de_passe'], $_POST['numero_de_telephone'], $_POST['civilite'])) {
   // Les données ont été soumises
-  $prenom = mysqli_real_escape_string($connexion, $_POST['prenom']);
-  $nom = mysqli_real_escape_string($connexion, $_POST['nom']);
-  $email = mysqli_real_escape_string($connexion, $_POST['email']);
-  $mot_de_passe = mysqli_real_escape_string($connexion, $_POST['mot_de_passe']);
-  $numero_de_telephone = mysqli_real_escape_string($connexion, $_POST['numero_de_telephone']);
-  $civilite = mysqli_real_escape_string($connexion, $_POST['civilite']);
+  $prenom = mysqli_real_escape_string($conn, $_POST['prenom']);
+  $nom = mysqli_real_escape_string($conn, $_POST['nom']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $mot_de_passe = mysqli_real_escape_string($conn, $_POST['mot_de_passe']);
+  $numero_de_telephone = mysqli_real_escape_string($conn, $_POST['numero_de_telephone']);
+  $civilite = mysqli_real_escape_string($conn, $_POST['civilite']);
 
   // Obtenir la date et l'heure actuelles
   $date_inscription = date('Y-m-d H:i:s');
@@ -161,12 +151,12 @@ if (isset($_POST['prenom'], $_POST['nom'], $_POST['email'], $_POST['mot_de_passe
   $query = "INSERT INTO inscriptionmonitor (prenom, nom, email, date_inscription)
           VALUES ('$prenom', '$nom', '$email', '$date_inscription')";
 
-  if (mysqli_query($connexion, $query)) {
+  if (mysqli_query($conn, $query)) {
       // Rediriger l'utilisateur vers une autre page en cas d'inscription réussie
       header("Location:Accueil.php");
       exit();
   } else {
-      echo "Erreur d'insertion de données: " . mysqli_error($connexion);
+      echo "Erreur d'insertion de données: " . mysqli_error($conn);
   }
 }
 
