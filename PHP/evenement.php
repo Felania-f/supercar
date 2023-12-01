@@ -136,35 +136,35 @@
   </div>
 
 <?php 
-// Mettre a jour le nombre de visiteurs dans la table 'visiteurs'
-// $sqlUpdate = "UPDATE visiteurs SET nombre_visiteurs = nombre_visiteurs + 1;";
-// $conn->query($sqlUpdate);
+//Mettre a jour le nombre de visiteurs dans la table 'visiteurs'
+$sqlUpdate = "UPDATE visiteurs SET nombre_visiteurs = nombre_visiteurs + 1;";
+$conn->query($sqlUpdate);
 
-// Sélectionnez le nombre total de vue
-// $sqlSelect = "SELECT nombre_visiteurs FROM visiteurs;";
-// $result = $conn->query($sqlSelect);
-// $row = $result->fetch_assoc();
-// $nombreVisiteurs = $row['nombre_visiteurs'];
+//Sélectionnez le nombre total de vue
+$sqlSelect = "SELECT nombre_visiteurs FROM visiteurs;";
+$result = $conn->query($sqlSelect);
+$row = $result->fetch_assoc();
+$nombreVisiteurs = $row['nombre_visiteurs'];
 
-// Affichage du nombre total de visiteurs
-// echo "<p>Nombre total de visiteurs : $nombreVisiteurs</p>";
+//Affichage du nombre total de visiteurs
+echo "<p>Nombre total de visiteurs : $nombreVisiteurs</p>";
 
-// Fermez la connexion à la base de données
-// $conn->close();
+//Fermez la connexion à la base de données
+$conn->close();
 ?>
 
 <?php
-// Augmenter le compteur de visiteurs
-$sqlUpdate = "INSERT INTO visiteurs (nombre_visiteurs) VALUES (1) ON DUPLICATE KEY UPDATE nombre_visiteurs = nombre_visiteurs + 1;";
-$conn->query($sqlUpdate);
+// // Augmenter le compteur de visiteurs
+// $sqlUpdate = "INSERT INTO visiteurs (nombre_visiteurs) VALUES (1) ON DUPLICATE KEY UPDATE nombre_visiteurs = nombre_visiteurs + 1;";
+// $conn->query($sqlUpdate);
 
-// Récupérer le nombre total de visiteurs par COUNT
-$sqlSelect = "SELECT COUNT(*) AS total_visiteurs FROM visiteurs;";
-$resultTotal = $conn->query($sqlSelect);
-$rowTotal = $resultTotal->fetch_assoc();
-$totalVisiteurs = $rowTotal['total_visiteurs'];
-echo "<p>Nombre total de visiteurs : $totalVisiteurs</p>";
-$conn->close();
+// // Récupérer le nombre total de visiteurs par COUNT
+// $sqlSelect = "SELECT COUNT(*) AS total_visiteurs FROM visiteurs;";
+// $resultTotal = $conn->query($sqlSelect);
+// $rowTotal = $resultTotal->fetch_assoc();
+// $totalVisiteurs = $rowTotal['total_visiteurs'];
+// echo "<p>Nombre total de visiteurs : $totalVisiteurs</p>";
+// $conn->close();
 ?>
 </body>
 

@@ -238,18 +238,7 @@
         
     </script>
     <?php
-        // Connect to the database
-        $servername="localhost";
-        $username="root";
-        $password="";
-        $database_name="supercar";
-
-        $conn = new mysqli($servername, $username, $password, $database_name);
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('db_connection.php');
 
         // Retrieve cars from database
         $sql = "SELECT * FROM caroussel ORDER BY id_update DESC LIMIT 1";
@@ -319,7 +308,7 @@
                     <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
                 </ul>
                 <UL class="menus">
-                    <li><a href="Privacy.html">Politique de Confidentialité</a></li>
+                    <li><a href="../HTML/Privacy.html">Politique de Confidentialité</a></li>
                     <li><a href="../HTML/mentionlegale.html">Mention légale</a></li>
                 </UL>
                 <p> ©2023 SuperCar | Le meilleur pour vous</p>

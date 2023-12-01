@@ -60,11 +60,7 @@
     <?php
 
     // Connect to the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database_name = "supercar";
-    $conn = mysqli_connect($servername, $username, $password, $database_name);
+    include('db_connection.php');
 
     // Retrieve the car information based on the ID in the query parameter
     $id = $_GET['id_eve'];

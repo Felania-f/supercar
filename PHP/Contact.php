@@ -86,39 +86,28 @@
     </div>
 
     <?php
-    // Connexion à la base de données MySQL
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "supercar";
-
-    $bdd = mysqli_connect($servername, $username, $password, $dbname);
-
-    // Vérification de la connexion avec la BD
-    if (!$bdd) {
-        die("Connexion échouée:" . mysqli_connect_error());
-    }
+    include('db_connection.php');
 
     // Récupération des données du formulaire
     if (!empty($_POST)) {
-        $nom_complet = mysqli_real_escape_string($bdd, $_POST['nom_complet']);
-        $email = mysqli_real_escape_string($bdd, $_POST['email']);
-        $message = mysqli_real_escape_string($bdd, $_POST['message']);
+        $nom_complet = mysqli_real_escape_string($conn, $_POST['nom_complet']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $message = mysqli_real_escape_string($conn, $_POST['message']);
 
         // Préparation de la requête SQL pour l'insertion des données du formulaire
         $sql = "INSERT INTO contact (`nom_complet`, `email`, `message`)
                 VALUES ('$nom_complet', '$email', '$message')";
 
         // Exécution de la requête SQL
-        if (mysqli_query($bdd, $sql)) { // vérifie si la requête a réussi
+        if (mysqli_query($conn, $sql)) { // vérifie si la requête a réussi
             header("Location: Accueil.php"); // redirige vers la page d'accueil
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($bdd);
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
     }
 
     // Fermeture de la connexion à la base de données
-    mysqli_close($bdd);
+    mysqli_close($conn);
     ?>
 
     <div class="footer-basic">

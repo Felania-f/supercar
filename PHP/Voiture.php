@@ -1,354 +1,148 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <title>My Shop</title>
-
   <link rel="icon" href="../Image/icon1.png" type="image/x-icon">
-
   <link rel="stylesheet" href="../Css/Voiture.css">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="../Css/searchbar.css">
-
   <link rel="stylesheet" href="../Css/Navbar.css">
-
   <link rel="stylesheet" href="../Css/Footer.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
   <script src="../Java/searchbar.js"></script>
-
-
-
-
-
 </head>
-
 <body>
-
-
-
   <nav>
-
     <div class="logo">
-
       <a href="../PHP/Accueil.php">
-
         <img src="../Image/MicrosoftTeams-image.png" alt="Your Logo">
-
       </a>
-
     </div>
-
     <ul class="menu">
-
       <li><a href="../PHP/Accueil.php">Accueil</a></li>
-
       <li><a href="../PHP/Voiture.php">Voitures</a></li>
-
       <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-
       <li><a href="../PHP/evenement.php">Évènements</a></li>
-
       <li><a href="../PHP/Contact.php">Contact</a></li>
-
     </ul>
-
-
-
     <?php
-
     session_start();
-
-
-
     if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
-
       $nom = $_SESSION['nom'];
-
       $prenom = $_SESSION['prenom'];
-
       echo "<div class='dropdown'>
-
                           <a>$nom $prenom</a>
-
                           <div class='dropdown-content'>
                           <a href='profile.php'>Profil</a>
-
                               <a href='deconnexion.php'>Déconnexion</a>
-
                           </div>
-
                       </div>";
-
     } else {
-
       // Réinitialiser la variable de session ici
-    
       unset($_SESSION['search_query']);
-
-
-
       echo "<div class='login'>
-
                           <a href='inscription.php'>Connexion</a>
-
                       </div>";
-
     }
-
     if (!isset($_SESSION['search_query'])) {
-
       $_SESSION['search_query'] = '';
-
     }
 
-
-
-    // Handle form submission
-    
+    // Handle form submission    
     if (isset($_POST['search'])) {
-
       $search = $_POST['search'];
-
       $_SESSION['search_query'] = $search;
 
-
-
-      // Redirect to avoid form resubmission
-    
+      // Redirect to avoid form resubmission    
       header("Location: " . $_SERVER['PHP_SELF']);
-
       exit();
-
     }
-
-
-
-
-
     ?>
-
-
-
   </nav>
-
-
-
   <div class="wholecontainer">
-
     <form method="POST" action="">
-
       <br><br><br><br><br>
-
       <div class="search-box">
-
         <input type="text" name="search" placeholder="Search...">
-
         <button type="submit" name="submit">Rechercher</button>
-
       </div>
-
   </div>
-
   </form>
 
-
-
   <div class="category-container">
-
     <h2>Categories</h2><br>
-
     <ul>
-
       <li><a href="Voiture.php">Toutes</a></li>
-
       <li><a href="Sport.php">Sport</a></li>
-
       <li><a href="Hatchback.php">Hatchback</a></li>
-
       <li><a href="Berline.php">Berline</a></li>
-
       <li><a href="SUV.php">SUV</a></li>
-
       <li><a href="4x4.php">4x4</a></li>
-
     </ul>
-
   </div>
 
-
-
-
-
-
-
-
-
   <?php
-
-  // Connect to the database
-  
-  $servername = "localhost";
-
-  $username = "root";
-
-  $password = "";
-
-  $database_name = "supercar";
-
-
-
-  $conn = new mysqli($servername, $username, $password, $database_name);
-
-
-
-  // Check connection
-  
-  if ($conn->connect_error) {
-
-    die("Connection failed: " . $conn->connect_error);
-
-  }
-
-
-
-
-
-
-
+ include('db_connection.php');
+ 
   // Check if the page has been refreshed
-  
   if (isset($_SESSION['refreshed']) && $_SESSION['refreshed'] == true) {
-
     unset($_SESSION['search_query']);
-
     $_SESSION['refreshed'] = false;
-
   }
-
-
-
   if (isset($_GET['reset']) && $_GET['reset'] == 1) {
-
     unset($_SESSION['search_query']);
-
     $_SESSION['refreshed'] = true;
-
   }
 
-
-
-  // Handle form submission
-  
+  // Handle form submission  
   if (isset($_POST['search'])) {
-
     $search = $_POST['search'];
-
     $_SESSION['search_query'] = $search;
 
-
-
-    // Redirect to avoid form resubmission
-  
+    // Redirect to avoid form resubmission  
     header("Location: " . $_SERVER['PHP_SELF']);
-
     exit();
-
   }
 
-
-
-
-
-  // Retrieve cars from database
-  
+  // Retrieve cars from database  
   $sql = "SELECT * FROM voiture";
-
   $result = $conn->query($sql);
-
-
-
   echo "<div class = container>";
-
-
-
   if (isset($_POST['search'])) {
-
     $search = $_POST['search'];
-
     $_SESSION['search_query'] = $search;
 
-
-
-    // récupérer la requête de recherche de la variable POST
-  
+    // récupérer la requête de recherche de la variable POST  
     $query = $_POST['search'];
 
-
-
-    // construire la requête SQL pour la recherche
-  
+    // construire la requête SQL pour la recherche  
     $sql = "SELECT * FROM voiture WHERE Marque LIKE '%$query%' OR Modele LIKE '%$query%' OR Annee LIKE '%$query%'";
 
-
-
-    // exécuter la requête SQL
-  
+    // exécuter la requête SQL  
     $result = mysqli_query($conn, $sql);
 
-
-
-    // afficher les résultats sous forme de HTML
-  
+    // afficher les résultats sous forme de HTML  
     if ($result->num_rows > 0) {
-
       // Output data of each row
-  
       $count = 0;
-
       while ($row = mysqli_fetch_assoc($result)) {
-
-
-
         $car_make = $row["Marque"];
-
         $car_model = $row["Modele"];
-
         $car_year = $row["Annee"];
-
         $car_price = $row["Prix"];
-
         $car_image = $row["Image"];
-
         $id = $row["Id_Voiture"];
 
-
-
         // Display car using HTML and PHP
-  
-
-
         if ($count % 3 == 0) {
-
           echo "<div class='row'>";
-
         }
 
         echo "<div class='col-md-4'>";
-
         echo "<div class='car'>";
-
         echo "<a href='specs.php?Id_Voiture=$id'>";
 
         echo "<img src='$car_image' alt='$car_make $car_model'>";

@@ -81,19 +81,8 @@
 
 
     <?php
-    // Connect to the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database_name = "supercar";
-
-    $conn = new mysqli($servername, $username, $password, $database_name);
-
-    // Check connection
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
-
+    // Connection à la base de donnée
+    include('db_connection.php');
 
     // Check if the page has been refreshed
     if (isset($_SESSION['refreshed']) && $_SESSION['refreshed'] == true) {

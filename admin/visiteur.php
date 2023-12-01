@@ -56,19 +56,19 @@
                 $result = mysqli_query($conn, $sql);
 
                  // Récupérer le nombre total de visiteurs en utilisant COUNT
-                 $sqlSelect = "SELECT COUNT(*) AS total_visiteurs FROM visiteurs;";
-                 $resultTotal = $conn->query($sqlSelect);
-                 $rowTotal = $resultTotal->fetch_assoc();
-                 $totalVisiteurs = $rowTotal['total_visiteurs'];
+                //  $sqlSelect = "SELECT COUNT(*) AS total_visiteurs FROM visiteurs;";
+                //  $resultTotal = $conn->query($sqlSelect);
+                //  $rowTotal = $resultTotal->fetch_assoc();
+                //  $totalVisiteurs = $rowTotal['total_visiteurs'];
 
-                // while ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                    // echo "<td class='nombre_visiteurs'>" . $row["nombre_visiteurs"] . " vue(s)</td>";
+                    echo "<td class='nombre_visiteurs'>" . $row["nombre_visiteurs"] . " vue(s)</td>";
                     
                     // Afficher "Nombre total de visiteurs"
-                    echo "<td colspan='2'>$totalVisiteurs vue(s)</td>";
+                    // echo "<td colspan='2'>$totalVisiteurs vue(s)</td>";
                     echo "</tr>";
-                // }
+                }
                                
                 // Fermer la connexion à la base de données
                 mysqli_close($conn);

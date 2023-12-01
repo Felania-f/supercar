@@ -16,12 +16,7 @@
 <body>
     <?php
     // Connect to the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database_name = "supercar";
-
-    $conn = new mysqli($servername, $username, $password, $database_name);
+    include('db_connection.php');
 
     // Check connection
     if ($conn->connect_error) {

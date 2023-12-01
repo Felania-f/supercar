@@ -58,45 +58,10 @@
         ?>
 
     </nav>
-    <?php
-    session_start();
-
-    if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
-        $nom = $_SESSION['nom'];
-        $prenom = $_SESSION['prenom'];
-        echo "<div class='dropdown'>
-                <a>$nom $prenom</a>
-                <div class='dropdown-content'>
-                    <a href='deconnexion.php'>Déconnexion</a>
-                </div>
-              </div>";
-    } else {
-        echo "<div class='login'>
-                <a href='inscription.php'>Connexion</a>
-              </div>";
-        echo "<script>
-                window.onload = function() {
-                    alert('Please login first.');
-                    window.location.href = 'inscription.php';
-                }
-              </script>";
-    }
-    ?>
-
-
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // étape 1 : Connexion à la base de données
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "supercar";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('db_connection.php');
 
         // étape 2 : Récupération des données du formulaire en utilisant la méthode POST
         $details = $_POST['details'];
@@ -147,12 +112,14 @@
                 <label for="modele"
                     style="color:rgb(146, 142, 142)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modèle
                     :</label>
+                <!-- Ajoutez l'attribut id au bouton -->
                 <a href="../PHP/Voiture.php">
-                    <button class="choix" value="choice" style='margin-top: -2em;' required>Choisissez un modèle</button>
+                    <button id="chooseModelBtn" class="choix" name="chosenModel" value="choice"
+                        style='margin-top: -2em;' required>Choisissez un modèle</button>
                 </a>
 
             </div>
-            <form method="post" action="Demande_essai1.php">
+            <form method="post" action="Demande_essai1.php" onsubmit="return validateForm()">
 
                 <div class="insertion">
                     <input type="text" name="details" required>
@@ -217,7 +184,16 @@
             </div>
         </div>
 
-
+        <script>
+        function validateForm() {
+            var chosenModel = document.querySelector('#chooseModelBtn').getAttribute('value');
+            if (chosenModel === 'choice') {
+                alert('Veuillez choisir un modèle de voiture avant de valider la demande.');
+                return false; // Annuler la soumission du formulaire
+            }
+            return true; // Soumettre le formulaire si tout est valide
+        }
+    </script>
         <script src="Java/Accueil.js"></script>
 </body>
 
