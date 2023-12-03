@@ -146,9 +146,6 @@ $result = $conn->query($sqlSelect);
 $row = $result->fetch_assoc();
 $nombreVisiteurs = $row['nombre_visiteurs'];
 
-//Affichage du nombre total de visiteurs
-echo "<p>Nombre total de visiteurs : $nombreVisiteurs</p>";
-
 //Fermez la connexion à la base de données
 $conn->close();
 ?>
