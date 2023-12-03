@@ -12,19 +12,7 @@
                 <div class="profile-form">
                     <?php
                     // Change these variables to match your database configuration
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "supercar";
-
-                    // Create connection
-                    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                    // Check connection
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-
-                    }
+                    include 'database_connection.php';
 
                     $id = "";
                     $prenom = "";

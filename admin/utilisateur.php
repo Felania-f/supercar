@@ -52,18 +52,7 @@
             </thead>
             <tbody>
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "supercar";
-
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+               include 'database_connection.php';
 
                 // Query the database
                 $sql = "SELECT * FROM admin_connexion";

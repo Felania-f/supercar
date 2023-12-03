@@ -41,20 +41,7 @@
                 <div class="profile-form">
                     <?php
                     // Change these variables to match your database configuration
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "supercar";
-
-                    // Create connection
-                    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                    // Check connection
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
-
-                    mysqli_set_charset($conn, "utf8");
+                    include 'database_connection.php';
 
                     // Check if the form has been submitted
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
