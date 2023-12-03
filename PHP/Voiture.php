@@ -15,53 +15,7 @@
   <script src="../Java/searchbar.js"></script>
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <a href="../PHP/Accueil.php">
-        <img src="../Image/MicrosoftTeams-image.png" alt="Your Logo">
-      </a>
-    </div>
-    <ul class="menu">
-      <li><a href="../PHP/Accueil.php">Accueil</a></li>
-      <li><a href="../PHP/Voiture.php">Voitures</a></li>
-      <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-      <li><a href="../PHP/evenement.php">Évènements</a></li>
-      <li><a href="../PHP/Contact.php">Contact</a></li>
-    </ul>
-    <?php
-    session_start();
-    if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
-      $nom = $_SESSION['nom'];
-      $prenom = $_SESSION['prenom'];
-      echo "<div class='dropdown'>
-                          <a>$nom $prenom</a>
-                          <div class='dropdown-content'>
-                          <a href='profile.php'>Profil</a>
-                              <a href='deconnexion.php'>Déconnexion</a>
-                          </div>
-                      </div>";
-    } else {
-      // Réinitialiser la variable de session ici
-      unset($_SESSION['search_query']);
-      echo "<div class='login'>
-                          <a href='inscription.php'>Connexion</a>
-                      </div>";
-    }
-    if (!isset($_SESSION['search_query'])) {
-      $_SESSION['search_query'] = '';
-    }
-
-    // Handle form submission    
-    if (isset($_POST['search'])) {
-      $search = $_POST['search'];
-      $_SESSION['search_query'] = $search;
-
-      // Redirect to avoid form resubmission    
-      header("Location: " . $_SERVER['PHP_SELF']);
-      exit();
-    }
-    ?>
-  </nav>
+<?php include('header.php'); ?>
   <div class="wholecontainer">
     <form method="POST" action="">
       <br><br><br><br><br>

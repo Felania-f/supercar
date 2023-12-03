@@ -15,23 +15,7 @@
 
 <body>
 
-  <nav>
-    <div class="logo">
-      <a href="../PHP/Accueil.php">
-        <img src="../Image/MicrosoftTeams-image.png" alt="Your Logo">
-      </a>
-    </div>
-    <ul class="menu">
-      <li><a href="../PHP/Accueil.php">Accueil</a></li>
-      <li><a href="../PHP/Voiture.php">Voitures</a></li>
-      <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-      <li><a href="../PHP/evenement.php">Evenements</a></li>
-      <li><a href="../PHP/Contact.php">Contact</a></li>
-    </ul>
-    <div class="login">
-      <a href="../PHP/login.php">Connexion</a>
-    </div>
-  </nav>
+<?php include('header.php'); ?>
 
   <?php
   echo '<div class="accoutn_main">';
