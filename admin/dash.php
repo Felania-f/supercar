@@ -12,21 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 5em;">
-        <a class="navbar-brand" href="#">SuperCar - Admin Panel</a>
-        <div>
-            <?php
-            session_start();
-            if (isset($_SESSION['email'])) {
-                $userEmail = $_SESSION['email'];
-                echo '<span class="user-info"><i class="fas fa-user"></i>&ensp;' . $userEmail . '</span>';
-                echo '<a href="adminConnexion.php"><button class="login">Deconnexion</button></a>';
-            } else {
-                echo '<a href="adminConnexion.php"><button class="login">Connexion</button></a>';
-            }
-            ?>
-        </div>
-    </nav>
+<?php include('navbar.php'); ?>
 
     <div class="container">
         <a href="accueil.php"><button class="button">Accueil</button></a>

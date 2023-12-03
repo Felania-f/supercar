@@ -10,20 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="Dash.php" style="margin-right: 40em;">SuperCar - Admin Panel</a>
-        <div>
-            <?php
-            session_start();
-            if (isset($_SESSION['email'])) {
-                $userEmail = $_SESSION['email'];
-                echo '<span class="user-info"><i class="fas fa-user"></i>&ensp;' . $userEmail . '</span>';
-            } else {
-                echo '<a href="adminConnexion.php"><button class="login">Connexion</button></a>';
-            }
-            ?>
-        </div>
-    </nav>
+<?php include('navbar.php'); ?>
 
     <div class="container mt-4">
         <a class="btn btn-primary" href="dash.php">Retour</a>
