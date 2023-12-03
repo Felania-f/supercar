@@ -6,8 +6,6 @@
     <title>My Shop</title>
     <link rel="icon" href="../Image/icon1.png" type="image/x-icon">
     <link rel="stylesheet" href="../Css/Services.css">
-    <link rel="stylesheet" href="../Css/Navbar.css">
-    <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -73,34 +71,7 @@
 
     </table>
 
-    <div class="footer-basic">
-        <footer>
-            <div class="social">
-
-                <table align="center">
-                    <tr>
-                        <td width="50" align="center">
-                            <a href="https://www.instagram.com/"><img src="../Image/instagram.png" width="25px"></a>
-                        </td>
-                        <td width="50" align="center">
-                            <a href="https://www.facebook.com/"><img src="../Image/facebook.png" width="30px"></a>
-                        </td>
-                        <td width="50" align="center">
-                            <a href="https://www.twitter.com/"><img src="../Image/twitter.png" width="30px"></a>
-                        </td>
-                    </tr>
-                </table><br><br>
-                <ul class="list-inline">
-
-                    <li class="list-inline-item"><a href="../PHP/Accueil.php">Accueil</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Services.php">Services</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Privacy.php">Politique de Confidentialité</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Contact.php">Contact</a></li>
-
-                </ul>
-                <p class="copyright">SuperCar © 2023</p>
-        </footer>
-    </div>
+    <?php include('footer.php'); ?>
 
 
 </body>

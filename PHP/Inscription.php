@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Login an Registration Page with Video Backgroud</title>
   <link rel="stylesheet" href="../Css/Inscription.css">
-  <link rel="stylesheet" href="../Css/Navbar.css">
-  <link rel="stylesheet" href="../Css/Footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />

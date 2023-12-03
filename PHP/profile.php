@@ -9,7 +9,6 @@
     <!-- Custom Css -->
     <link rel="stylesheet" href="../Css/profile.css">
     <link rel="stylesheet" href="../Css/Navbar.css">
-    <link rel="stylesheet" href="../Css/Footer.css">
 
     <!-- FontAwesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
@@ -174,35 +173,7 @@
 
     </div>
     </div>
-    <div class="footer-basic">
-        <footer>
-            <div class="social">
-
-                <table align="center">
-                    <tr>
-                        <td width="50" align="center">
-                            <a href="https://www.instagram.com/"><img src="../Image/instagram.png" width="25px"></a>
-                        </td>
-                        <td width="50" align="center">
-                            <a href="https://www.facebook.com/"><img src="../Image/facebook.png" width="30px"></a>
-                        </td>
-                        <td width="50" align="center">
-                            <a href="https://www.twitter.com/"><img src="../Image/twitter.png" width="30px"></a>
-                        </td>
-                    </tr>
-                </table><br><br>
-                <ul class="list-inline">
-
-                    <li class="list-inline-item"><a href="../PHP/Accueil.php">Accueil</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Services.php">Services</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Privacy.php">Politique de Confidentialité</a></li>
-                    <li class="list-inline-item"><a href="../PHP/Contact.php">Contact</a></li>
-
-                </ul>
-                <p class="copyright">SuperCar © 2023</p>
-        </footer>
-
-    </div>
+    <?php include('footer.php'); ?>
 
     <script>
         function togglePasswordVisibility() {

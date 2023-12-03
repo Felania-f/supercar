@@ -67,45 +67,7 @@ $car = mysqli_fetch_assoc($result);
 
     </main>
     <br><br>
-    <div class="footer-basic">
-
-        <footer>
-
-            <div class="line">
-
-                <ul class="social_icon">
-
-
-
-                    <li><a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-
-                    <li><a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
-
-                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-
-                    <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-
-                </ul>
-
-                <UL class="menus">
-
-                    <li><a href="Privacy.html">Politique de Confidentialité</a></li>
-
-                    <li><a href="mentionlegale.html">Mention légale</a></li>
-
-                </UL>
-
-                <p> ©2023 SuperCar | Le meilleur pour vous</p>
-
-        </footer>
-
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-
-    </div>
+    <?php include('footer.php'); ?>
     </div>
 </body>
 

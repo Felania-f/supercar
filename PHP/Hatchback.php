@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="../Css/Voiture.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../Css/searchbar.css">
-  <link rel="stylesheet" href="../Css/Navbar.css">
-  <link rel="stylesheet" href="../Css/Footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,9 +18,7 @@
 </head>
 
 <body>
-
 <?php include('header.php'); ?>
-
   <div class="wholecontainer">
     <form method="POST" action="">
       <br><br><br><br><br>
@@ -200,47 +196,7 @@
     // Close database connection
     $conn->close();
     ?>
-
-    <div class="footer-basic">
-
-      <footer>
-
-        <div class="line">
-
-          <ul class="social_icon">
-
-
-
-            <li><a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-
-            <li><a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
-
-            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-
-            <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-
-          </ul>
-
-          <UL class="menus">
-
-            <li><a href="Privacy.html">Politique de Confidentialité</a></li>
-
-            <li><a href="mentionlegale.html">Mention légale</a></li>
-
-          </UL>
-
-          <p> ©2023 SuperCar | Le meilleur pour vous</p>
-
-      </footer>
-
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-
-    </div>
-
+<?php include('footer.php'); ?>
 </body>
 
 </html>

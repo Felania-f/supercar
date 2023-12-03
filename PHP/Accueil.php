@@ -4,13 +4,7 @@
         <meta charset="utf-8">
         <title>Accueil</title>
         <link rel="stylesheet" href="../Css/Accueil.css">
-        <link rel="stylesheet" href="../Css/Navbar.css">
-        <link rel="stylesheet" href="../Css/Footer.css">
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        
-
-
     </head>
     <body bgcolor="black">
 
@@ -259,25 +253,7 @@
                 </table>
             </font>
         </blockquote>
-
-        <div class="footer-basic">
-            <footer>
-                <div class="line">
-                <ul class="social_icon">
-                    <li><a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                </ul>
-                <UL class="menus">
-                    <li><a href="../HTML/Privacy.html">Politique de Confidentialité</a></li>
-                    <li><a href="../HTML/mentionlegale.html">Mention légale</a></li>
-                </UL>
-                <p> ©2023 SuperCar | Le meilleur pour vous</p>
-            </footer>
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        </div>
+        <?php include('footer.php'); ?>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
