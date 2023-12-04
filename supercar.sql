@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 27 nov. 2023 à 17:01
+-- Généré le : lun. 04 déc. 2023 à 10:55
 -- Version du serveur : 11.1.3-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -59,7 +59,6 @@ CREATE TABLE `admin_connexion` (
 --
 
 INSERT INTO `admin_connexion` (`id_adminconnexion`, `email`, `mot_de_passe`) VALUES
-(54, 'aaaa@gmail.c9om', '5ca168e44ea0f056fa0c42850fa54767e0c1f997'),
 (57, 'felaniaina@admin.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
 (69, 'felaniaina71@gmail.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441'),
 (70, 'voary@admin.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441');
@@ -88,7 +87,7 @@ CREATE TABLE `caroussel` (
 --
 
 INSERT INTO `caroussel` (`id_update`, `image1`, `image2`, `image3`, `image4`, `image5`, `apdn`, `apdn1`, `image_apdn`, `image_apdn1`) VALUES
-(1, '../Image/AMG.webp', '../Image/Huracan.webp', '../Image/Hellcat.webp', '../Image/Evo.webp', '../Image/Ford.webp', 'SuperCar est une entreprise spécialisée dans la vente de voitures neuves importées de différents pays tels que le Japon, Singapour, l\'Afrique du Sud, les États-Unis, la Chine, l\'Allemagne, la France et d\'autres. Depuis sa création en 2009, notre entreprise s\'est                        efforcée de fournir à nos clients une large gamme de voitures de qualité supérieure à des prix compétitifs. Nous avons des entrepôts de stockage à plusieurs endroits pour répondre aux besoins de nos clients. ', 'Nous accordons une grande importance à la satisfaction de nos clients. C\'est pourquoi nous offrons à nos clients la possibilité d\'essayer une voiture avant de l\'acheter.  Chez SuperCar, nous sommes fiers de notre engagement envers la qualité et la satisfaction de nos clients. Nous travaillons constamment                           pour améliorer nos services et pour rester à la pointe de l\'industrie de la vente de voitures neuves.', '../Image/dealer.jpg', '../Image/mercedes.jpg');
+(1, '../Image/AMG.webp', '../Image/Huracan.webp', '../Image/Hellcat.webp', '../Image/Evo.webp', '../Image/Ford.webp', 'SuperCar est une entreprise spécialisée dans la vente de voitures neuves importées de différents pays tels que le Japon, Singapour, l\'Afrique du Sud, les États-Unis, la Chine, l\'Allemagne, la France et d\'autres. Depuis sa création en 2009, notre entreprise s\'est                        efforcée de fournir à nos clients une large gamme de voitures de qualité supérieure à des prix compétitifs. Nous avons des entrepôts de stockage à plusieurs endroits pour répondre aux besoins de nos clients.', 'Nous accordons une grande importance à la satisfaction de nos clients. C\'est pourquoi nous offrons à nos clients la possibilité d\'essayer une voiture avant de l\'acheter.  Chez SuperCar, nous sommes fiers de notre engagement envers la qualité et la satisfaction de nos clients. Nous travaillons constamment                           pour améliorer nos services et pour rester à la pointe de l\'industrie de la vente de voitures neuves.', '../Image/dealer.jpg', '../Image/mercedes.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,7 +109,9 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`idcontact`, `nom_complet`, `email`, `message`) VALUES
 (758, 'nikhil mohit', 'nikhil.mohit12@gmail.co', 'bonsoir'),
 (785, 'FANOMEZANTSOA Felaniaina', 'felaniaina71@gmail.com', 'bonjour'),
-(786, 'FANOMEZANTSOA Felaniaina', 'felaniaina71@gmail.com', 'bonjour');
+(786, 'FANOMEZANTSOA Felaniaina', 'felaniaina71@gmail.com', 'bonjour'),
+(787, 'FEFE', 'felaniaina@admin.com', 'FEFEE'),
+(795, 'huhuhu', 'felaniaina@admin.com', 'dddd');
 
 -- --------------------------------------------------------
 
@@ -140,9 +141,18 @@ CREATE TABLE `demande` (
 --
 
 INSERT INTO `demande` (`ID_demande`, `idinscription`, `nom`, `prenom`, `email`, `Id_Voiture`, `marque`, `modele`, `details`, `date1`, `date2`, `heure1`, `heure2`, `Statuts1`) VALUES
-(40, '540', 'loto', 'zean mari', 'zeanmari@gmail.com', '1', 'ford', 'raptor', 'ehhhhh', '2023-11-20', '2023-11-24', '23:00:00', '00:00:00', 'Confirmé'),
-(41, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '2', 'Ford', 'Raptor F-150', 'adaweadaw', '2023-11-07', '2023-11-28', '12:08:00', '17:08:00', 'Terminé'),
-(42, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-11-01', '2023-11-02', '11:58:00', '13:58:00', 'Confirmé');
+(42, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-11-01', '2023-11-02', '11:58:00', '13:58:00', 'Terminé'),
+(44, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-02', '2023-12-01', '10:14:00', '11:14:00', 'En cours'),
+(45, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', 'dawe', '2023-12-07', '2023-12-02', '09:16:00', '11:15:00', 'En cours'),
+(46, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-04', '2023-12-04', '11:46:00', '11:47:00', 'En cours'),
+(47, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '2', 'Ford', 'Raptor F-150', '4x4', '2023-12-01', '2023-12-02', '11:49:00', '13:49:00', 'En cours'),
+(49, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-02', '2023-12-03', '20:26:00', '21:26:00', 'En cours'),
+(51, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-04', '2023-12-13', '11:25:00', '11:25:00', 'En cours'),
+(52, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-06', '2023-12-16', '11:26:00', '11:26:00', 'En cours'),
+(53, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-01', '2023-12-07', '11:28:00', '11:28:00', 'En cours'),
+(54, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-01', '2023-12-16', '11:33:00', '11:34:00', 'En cours'),
+(55, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-09', '2023-12-17', '11:56:00', '11:56:00', 'En cours'),
+(56, '538', 'FANOMEZANTSOA', 'Felania', 'felaniaina@admin.com', '1', 'Mercedes AMG GT', 'Mercedes', '4x4', '2023-12-01', '2023-12-24', '11:57:00', '11:58:00', 'En cours');
 
 -- --------------------------------------------------------
 
@@ -209,14 +219,7 @@ CREATE TABLE `inscription` (
 --
 
 INSERT INTO `inscription` (`idinscription`, `prenom`, `nom`, `email`, `mot_de_passe`, `numero_de_telephone`, `civilite`) VALUES
-(534, 'Ethan', 'Tuckmansing', 'tuckmansing2004@gmail.com', 'ctwqf43n', '58426274', 'Mauricien'),
-(536, 'nikhil', 'Mohit', 'nikhil.mohit12@gmail.com', '12345', '57663239', 'maurice'),
-(537, 'zad', 'maeva', 'nikhil.mohit03@gmail.com', '12345', '57663239', 'maurice'),
-(538, 'Felania', 'FANOMEZANTSOA', 'felaniaina@admin.com', '12345', '0331138389', 'Malagasy'),
-(539, 'Felania', 'FANOMEZANTSOA', 'felaniaina@admin.com', 'voary', '0331138389', 'Malagasy'),
-(541, '', '', '', '', '', ''),
-(542, '', '', '', '', '', ''),
-(543, '', '', '', '', '', '');
+(538, 'Felania', 'FANOMEZANTSOA', 'felaniaina@admin.com', '12345', '0331138389', 'Malagasy');
 
 --
 -- Déclencheurs `inscription`
@@ -246,7 +249,17 @@ CREATE TABLE `inscriptionmonitor` (
 --
 
 INSERT INTO `inscriptionmonitor` (`id`, `prenom`, `nom`, `email`, `date_inscription`) VALUES
-(1, 'cfc', 'Fanomezantsoa', 'felania@admin.com', '2023-11-27');
+(1, 'cfc', 'Fanomezantsoa', 'felania@admin.com', '2023-11-27'),
+(2, 'voary', 'Fanomezantsoa', 'voary@gmail.com', '2023-12-01'),
+(3, 'voary', 'Fanomezantsoa', 'nikhil.mohit@admin.com', '2023-12-01'),
+(4, 'cfc', 'Fe', 'nikhil.mt@admin.com', '2023-12-01'),
+(5, 'f', 'gdsrests324534', 'nik.@admin.com', '2023-12-01'),
+(6, 'voary', 'gdsrests324534', 'nikhil.@admin.com', '2023-12-01'),
+(7, 'voary', 'Fe', 'aaaa@admin.com', '2023-12-01'),
+(8, 'voary', 'Fanomezantsoa', 'felaniai@admin.com', '2023-12-01'),
+(9, 'voary', 'Fe', 'felani@admin.com', '2023-12-01'),
+(10, 'voary', 'test', 'felaniai@admin.com', '2023-12-01'),
+(11, 'voary', 'Fanomezantsoa', 'felania@admin.com', '2023-12-03');
 
 -- --------------------------------------------------------
 
@@ -274,7 +287,36 @@ INSERT INTO `loginmonitor` (`id`, `email`, `success`, `connectionDate`) VALUES
 (26, 'felaniaina@admin.com', 1, '2023-11-27 11:03:04'),
 (27, 'felaniaina@admin.com', 1, '2023-11-27 11:05:15'),
 (28, 'voary@admin.com', 1, '2023-11-27 11:05:40'),
-(29, 'felaniaina@admin.com', 1, '2023-11-27 19:44:21');
+(29, 'felaniaina@admin.com', 1, '2023-11-27 19:44:21'),
+(30, 'felaniaina@admin.com', 1, '2023-11-28 11:17:13'),
+(31, 'felaniaina@admin.com', 1, '2023-11-28 11:30:14'),
+(32, 'felaniaina@admin.com', 1, '2023-11-28 11:39:04'),
+(33, 'felaniaina@admin.com', 1, '2023-11-28 12:33:08'),
+(34, 'felaniaina@admin.com', 1, '2023-11-29 10:18:40'),
+(35, 'felaniaina@admin.com', 1, '2023-11-29 12:27:15'),
+(36, 'felaniaina@admin.com', 1, '2023-12-01 08:44:29'),
+(37, 'felaniaina@admin.com', 1, '2023-12-03 20:01:44'),
+(38, 'felaniaina@admin.com', 1, '2023-12-03 20:12:49'),
+(39, 'felaniaina@admin.com', 0, '2023-12-03 20:40:38'),
+(40, 'felaniaina@admin.com', 1, '2023-12-03 20:40:43');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `visiteurs`
+--
+
+CREATE TABLE `visiteurs` (
+  `id` int(11) NOT NULL,
+  `nombre_visiteurs` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `visiteurs`
+--
+
+INSERT INTO `visiteurs` (`id`, `nombre_visiteurs`) VALUES
+(13, 48);
 
 -- --------------------------------------------------------
 
@@ -319,7 +361,7 @@ INSERT INTO `voiture` (`Id_Voiture`, `Marque`, `Modele`, `idcategorie`, `Annee`,
 (59, 'Mercedes', 'X-Class', '4x4', '2020', 'La Mercedes X-Class est un pick-up haut de gamme qui a été produit de 2017 à 2020. Voici quelques-unes de ses spécifications pour l\'année 2019 :Moteurs : 2,3 litres Diesel quatre cylindres (163 ou 190 chevaux) et 3,0 litres V6 Diesel (258 chevaux).Boîte de vitesses : manuelle à six rapports ou automatique à sept rapports.Capacité de charge utile : jusqu\'à 1 042 kg.Capacité de remorquage : jusqu\'à 3 500 kg.Système de traction : 4 roues motrices avec différentiel arrière à glissement limité.Dimensions : longueur de 5,34 mètres, largeur de 1,92 mètre et hauteur de 1,82 mètre.Équipements de série : climatisation, régulateur de vitesse, système audio avec écran tactile, caméra de recul, jantes en alliage, phares à LED, etc.Veuillez noter que la production de la Mercedes X-Class a été interrompue en mai 2020.', '51708 €', '../Image/Xclass.webp'),
 (60, 'Mitsubishi', 'Triton GLX', '4x4', '2023', 'La Mitsubishi Triton 2023 est une camionnette robuste et fiable conçue pour les travaux lourds et les aventures tout-terrain. Voici quelques-unes de ses spécifications :\\r\\n\\r\\nMoteur : diesel de 2,4 litres à quatre cylindres, capable de produire jusqu\\\'à 178 chevaux et 317 lb-pi de couple\\r\\nTransmission : manuelle à six vitesses ou automatique à six vitesses avec mode manuel et palettes de changement de vitesse au volant\\r\\nCapacité de remorquage : jusqu\\\'à 3 100 kg (6 834 lb)\\r\\nCapacité de charge utile : jusqu\\\'à 1 080 kg (2 381 lb)\\r\\nSuspension arrière : suspension multibras pour une meilleure stabilité et une meilleure tenue de route\\r\\nSystème de traction intégrale : avec un choix de modes de conduite, y compris le mode 4x4 pour une conduite tout-terrain\\r\\nCaractéristiques de sécurité : comprenant le contrôle de stabilité électronique, le contrôle de traction actif, l\\\'assistance au freinage d\\\'urgence, l\\\'avertissement de collision avant, l\\\'alerte de sortie de voie et plus encore.', '28 200 €', '../Image/triton.webp'),
 (61, 'Mitsubishi', 'Outlander PHEV', 'SUV', '2023', 'La Mitsubishi Outlander PHEV est un SUV hybride rechargeable qui combine un moteur à essence de 2,4 litres avec deux moteurs électriques pour produire une puissance combinée de 221 chevaux. Il est équipé d\\\'une transmission à variation continue (CVT) et d\\\'une traction intégrale. La batterie lithium-ion de 13,8 kWh permet une autonomie électrique allant jusqu\\\'à 24 miles (38 km) selon l\\\'Environmental Protection Agency (EPA) des États-Unis. La consommation de carburant combinée est de 74 miles par gallon équivalent (MPGe) ou 3,2 litres aux 100 km, ce qui en fait l\\\'un des véhicules les plus économes en carburant de sa catégorie. La Mitsubishi Outlander PHEV est également équipée d\\\'un grand nombre de caractéristiques de sécurité et de technologie, y compris un système d\\\'infodivertissement compatible avec Apple CarPlay et Android Auto, une caméra de recul et une suite de sécurité active comprenant des capteurs de stationnement, un régulateur de vitesse adaptatif et un avertisseur de collision avant avec freinage d\\\'urgence autonome.', '42 665 €', '../Image/outlander.jpg'),
-(63, 'Ford', 'Fusion', 'Berline', '2021', 'La Ford Fusion est une berline familiale produite par le constructeur automobile américain Ford. Voici quelques spécifications pour le modèle 2020 :\\r\\n\\r\\nMoteurs disponibles : 4 cylindres de 2,5 litres, 4 cylindres turbo de 1,5 litre, 4 cylindres turbo de 2,0 litres, hybride de 2,0 litres, hybride enfichable de 2,0 litres Puissance : varie de 175 à 245 chevaux selon le moteur choisi ransmission : automatique à 6 ou 8 rapports Consommation de carburant : varie selon le moteur et la configuration, allant de 6,9 à 9,4 litres aux 100 kilomètres en ville et de 5,5 à 6,2 litres aux 100 kilomètres sur autoroute Dimensions : longueur de 4 872 mm, largeur de 1 852 mm, hauteur de 1 468 mm et empattement de 2 850 mm Capacité de la boîte à gants : 6,9 litres Capacité du coffre : 453 litres Équipements : système audio de 6 haut-parleurs, système de navigation, écran tactile de 8 pouces, caméra de recul, régulateur de vitesse adaptatif, freinage d\'urgence automatique, système d\'aide au stationnement, etc.', '36 671 €', '../Image/m4.webp'),
+(63, 'Ford', 'Fusion', 'Berline', '2021', 'La Ford Fusion est une berline familiale produite par le constructeur automobile américain Ford. Voici quelques spécifications pour le modèle 2020 :\\r\\n\\r\\nMoteurs disponibles : 4 cylindres de 2,5 litres, 4 cylindres turbo de 1,5 litre, 4 cylindres turbo de 2,0 litres, hybride de 2,0 litres, hybride enfichable de 2,0 litres Puissance : varie de 175 à 245 chevaux selon le moteur choisi ransmission : automatique à 6 ou 8 rapports Consommation de carburant : varie selon le moteur et la configuration, allant de 6,9 à 9,4 litres aux 100 kilomètres en ville et de 5,5 à 6,2 litres aux 100 kilomètres sur autoroute Dimensions : longueur de 4 872 mm, largeur de 1 852 mm, hauteur de 1 468 mm et empattement de 2 850 mm Capacité de la boîte à gants : 6,9 litres Capacité du coffre : 453 litres Équipements : système audio de 6 haut-parleurs, système de navigation, écran tactile de 8 pouces, caméra de recul, régulateur de vitesse adaptatif, freinage d\'urgence automatique, système d\'aide au stationnement, etc.', '36 670 €', '../Image/m4.webp'),
 (64, 'Mitsubishi', 'Lancer EX', 'Berline', '2017', 'La Mitsubishi Lancer EX 2017 est une berline compacte sportive proposée avec une seule motorisation. Voici quelques-unes de ses spécifications :\\r\\n\\r\\nMoteur : 2,0 litres quatre cylindres en ligne\\r\\nPuissance : 148 chevaux\\r\\nCouple : 196 Nm\\r\\nBoîte de vitesses : transmission à variation continue (CVT)\\r\\nAccélération de 0 à 100 km/h : environ 10 secondes\\r\\nVitesse maximale : environ 190 km/h\\r\\nConsommation de carburant : environ 7,2 L/100 km (en cycle mixte)\\r\\nCapacité du réservoir de carburant : 59 litres\\r\\nDimensions : longueur de 4,57 m, largeur de 1,76 m, hauteur de 1,49 m\\r\\nPoids : 1 295 kg (version de base)\\r\\nCoffre : 400 litres\\r\\nLa Lancer EX 2017 est équipée de nombreuses fonctionnalités de sécurité telles que des freins antiblocage, des airbags frontaux et latéraux, un contrôle électronique de la stabilité, une caméra de recul, etc. En outre, elle est dotée de plusieurs équipements de confort et de commodité tels que des sièges avant chauffants, une climatisation automatique à deux zones, un système audio à six haut-parleurs, etc. ', '13 360 €', '../Image/ex.jpg');
 
 --
@@ -381,6 +423,12 @@ ALTER TABLE `loginmonitor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `visiteurs`
+--
+ALTER TABLE `visiteurs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `voiture`
 --
 ALTER TABLE `voiture`
@@ -394,7 +442,7 @@ ALTER TABLE `voiture`
 -- AUTO_INCREMENT pour la table `admin_connexion`
 --
 ALTER TABLE `admin_connexion`
-  MODIFY `id_adminconnexion` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id_adminconnexion` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT pour la table `caroussel`
@@ -406,13 +454,13 @@ ALTER TABLE `caroussel`
 -- AUTO_INCREMENT pour la table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `idcontact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=787;
+  MODIFY `idcontact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=796;
 
 --
 -- AUTO_INCREMENT pour la table `demande`
 --
 ALTER TABLE `demande`
-  MODIFY `ID_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `ID_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT pour la table `essai`
@@ -424,31 +472,37 @@ ALTER TABLE `essai`
 -- AUTO_INCREMENT pour la table `evenement`
 --
 ALTER TABLE `evenement`
-  MODIFY `id_eve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_eve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `inscription`
 --
 ALTER TABLE `inscription`
-  MODIFY `idinscription` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=544;
+  MODIFY `idinscription` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=566;
 
 --
 -- AUTO_INCREMENT pour la table `inscriptionmonitor`
 --
 ALTER TABLE `inscriptionmonitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `loginmonitor`
 --
 ALTER TABLE `loginmonitor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT pour la table `visiteurs`
+--
+ALTER TABLE `visiteurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT pour la table `voiture`
 --
 ALTER TABLE `voiture`
-  MODIFY `Id_Voiture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `Id_Voiture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
