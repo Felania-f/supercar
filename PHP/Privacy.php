@@ -6,7 +6,6 @@
     <title>My Shop</title>
     <link rel="icon" href="../Image/icon1.png" type="image/x-icon">
     <link rel="stylesheet" href="../Css/Privacy.css">
-    <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />

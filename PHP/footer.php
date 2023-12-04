@@ -16,9 +16,9 @@
                     <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
                 </ul>
                 <UL class="menus">
-                    <li><a href="../HTML/Privacy.html">Politique de Confidentialité</a></li> 
+                    <li><a href="Privacy.php">Politique de Confidentialité</a></li> 
                     <li>|</li> 
-                    <li><a href="../HTML/mentionlegale.html">Mention légale</a></li>
+                    <li><a href="mentionlegale.php">Mention légale</a></li>
                 </UL>
                 <p> ©2023 SuperCar | Le meilleur pour vous</p>
             </footer>

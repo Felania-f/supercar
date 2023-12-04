@@ -6,8 +6,6 @@
     <title>Mention Légale - SuperCar</title>
     <link rel="icon" href="../Image/icon1.png" type="image/x-icon">
     <link rel="stylesheet" href="../Css/mention_legale.css">
-    <link rel="stylesheet" href="../Css/Navbar.css">
-    <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-9X3q2Y1+D/7VkcE+mRjL7Jz2cTfjJbR8Gx9XVGvY04ER0ZJjLs8Wwq0sD4yKjDh1i4/aW0myX29vHkOiy/oZLQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,23 +13,7 @@
 
 <body>
     <div class="section1">
-        <nav>
-            <div class="logo">
-                <a href="../PHP/Accueil.php">
-                    <img src="../Image/MicrosoftTeams-image.png" alt="Votre Logo">
-                </a>
-            </div>
-            <ul class="menu">
-                <li><a href="../PHP/Accueil.php">Accueil</a></li>
-                <li><a href="../PHP/Voiture.php">Voiture</a></li>
-                <li><a href="../PHP/Demande_essai.php">Demande d'essai</a></li>
-                <li><a href="../PHP/evenement.php">Événement</a></li>
-                <li><a href="../PHP/Contact.php">Contact</a></li>
-            </ul>
-            <div class="login">
-                <a href="../PHP/login.php">Connexion</a>
-            </div>
-        </nav>
+    <?php include('header.php'); ?>
     </div>
     <table>
         <tr>
@@ -86,26 +68,7 @@
         </tr>
     </table>
 
-    <div class="footer-basic">
-        <footer>
-            <div class="line">
-                <ul class="social_icon">
-
-                    <li><a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                </ul>
-                <UL class="menus">
-                    <li><a href="Privacy.html">Politique de Confidentialité</a></li>
-                    <li><a href="mentionlegale.html">Mention légale</a></li>
-                </UL>
-                <p> ©2023 SuperCar | Le meilleur pour vous</p>
-        </footer>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    </div>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>
