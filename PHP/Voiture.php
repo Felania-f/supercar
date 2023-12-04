@@ -96,187 +96,94 @@
         echo "<div class='col-md-4'>";
         echo "<div class='car'>";
         echo "<a href='specs.php?Id_Voiture=$id'>";
-
         echo "<img src='$car_image' alt='$car_make $car_model'>";
-
         echo "<h2>$car_make $car_model</h2>";
-
         echo "<p>$car_year</p>";
-
         echo "<p>Price: $car_price</p>";
-
         echo "<br>";
-
         echo "<div class='button-container'>";
-
         echo "<button class='info-btn'>Plus D'info</button>";
-
         echo "</a>";
-
         echo "<a href='Demande_essai1.php?Id_Voiture=$id'>";
-
         echo "<button class='test-btn'>Demande d'Essai</button>";
-
         echo "</a>";
-
         echo "</div>";
-
         echo "</div>";
-
         echo "</div>";
-
         if ($count % 3 == 2) {
-
           echo "</div>";
-
         }
-
         $count++;
-
       }
-
       if ($count % 3 != 0) {
-
         echo "</div>";
-
       }
-
     } else {
-
       echo "No cars found.";
-
     }
-
     echo "</div>";
-
-
-
   } else if (isset($_SESSION['search_query'])) {
-
     // Retrieve the previous search query from the session variable
-  
     $search = $_SESSION['search_query'];
 
-
-
-    // Build the SQL query for the previous search
-  
+    // Build the SQL query for the previous search  
     $sql = "SELECT * FROM voiture WHERE Marque LIKE '%$search%' OR Modele LIKE '%$search%' OR Annee LIKE '%$search%'";
 
-
-
-    // Execute the SQL query
-  
+    // Execute the SQL query  
     $result = mysqli_query($conn, $sql);
 
-
-
-    // Display the results as HTML
-  
+    // Display the results as HTML  
     echo "<div class = container>";
-
     if ($result->num_rows > 0) {
-
       // Output data of each row
-  
       $count = 0;
-
       while ($row = mysqli_fetch_assoc($result)) {
-
         $car_make = $row["Marque"];
-
         $car_model = $row["Modele"];
-
         $car_year = $row["Annee"];
-
         $car_price = $row["Prix"];
-
         $car_image = $row["Image"];
-
         $id = $row["Id_Voiture"];
 
-
-
-        // Display car using HTML and PHP
-  
+        // Display car using HTML and PHP  
         if ($count % 3 == 0) {
-
           echo "<div class='row'>";
-
         }
-
         echo "<div class='col-md-4'>";
-
         echo "<div class='car'>";
-
         echo "<a href='specs.php?Id_Voiture=$id'>";
-
         echo "<img src='$car_image' alt='$car_make $car_model'>";
-
         echo "<h2>$car_make $car_model</h2>";
-
         echo "<p>$car_year</p>";
-
         echo "<p>Price: $car_price</p>";
-
         echo "<br>";
-
         echo "<div class='button-container'>";
-
         echo "<button class='info-btn'>Plus D'info</button>";
-
         echo "</a>";
-
         echo "<a href='Demande_essai1.php?Id_Voiture=$id'>";
-
         echo "<button class='test-btn'>Demande d'Essai</button>";
-
         echo "</a>";
-
         echo "</div>";
-
         echo "</div>";
-
         echo "</div>";
-
         if ($count % 3 == 2) {
-
           echo "</div>";
-
         }
-
         $count++;
-
       }
-
       if ($count % 3 != 0) {
-
         echo "</div>";
-
       }
-
     } else {
-
       echo "No cars found.";
-
     }
-
     echo "</div>";
-
   }
-
   echo "</div>";
 
-
-
-
-
-  // Close database connection
-  
+  // Close database connection  
   $conn->close();
-
   ?>
 <?php include('footer.php'); ?>
 </body>
-
 </html>
