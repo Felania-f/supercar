@@ -8,12 +8,41 @@
     <title>My Shop</title>
     <link rel="icon" href="../Image/icon1.png" type="image/x-icon">
     <link rel="stylesheet" href="../Css/Demande d'essai.css">
+    <link rel="stylesheet" href="../Css/Navbar.css">
     <link rel="stylesheet" href="../Css/Footer1.css">
 </head>
 
 <body>
 
 <?php include('header.php'); ?>
+
+        <?php
+        session_start();
+        if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['idinscription']) && isset($_SESSION['email'])) {
+            $nom = $_SESSION['nom'];
+            $prenom = $_SESSION['prenom'];
+            $idinscription = $_SESSION['idinscription'];
+            $email = $_SESSION['email'];
+            echo "<div  class='dropdown'>
+                              <a>$nom $prenom</a>
+                              <div class='dropdown-content'>
+                              <a href='profile.php'>Profil</a>
+                            <a href='deconnexion.php'>Déconnexion</a>
+                            </div>
+                            </div>";
+        } else {
+            echo "<div class='login'>
+                            <a href='inscription.php'>Connexion</a>
+                          </div>";
+            echo "<script>
+                            window.onload = function() {
+                                alert('Please login first.');
+                                window.location.href = 'inscription.php';
+                            }
+                          </script>";
+        }
+
+        ?>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -39,15 +68,7 @@
 
 
         // Fetching the "Modele" value from the database based on the ID
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "supercar";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('db_connection.php');
         var_dump($Id_Voiture);
         var_dump($_POST);
         $sql = "SELECT Marque, Modele FROM voiture WHERE Id_Voiture = $idVoiture";
@@ -158,6 +179,7 @@
         <div class="footer-basic1">
             <div class="down">
             <?php include('footer.php'); ?>
+                </footer>
             </div>
         </div>
 

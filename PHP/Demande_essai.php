@@ -14,6 +14,30 @@
 <body>
 
 <?php include('header.php'); ?>
+    <?php
+    session_start();
+
+    if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) {
+        $nom = $_SESSION['nom'];
+        $prenom = $_SESSION['prenom'];
+        echo "<div class='dropdown'>
+                <a>$nom $prenom</a>
+                <div class='dropdown-content'>
+                    <a href='deconnexion.php'>Déconnexion</a>
+                </div>
+              </div>";
+    } else {
+        echo "<div class='login'>
+                <a href='inscription.php'>Connexion</a>
+              </div>";
+        echo "<script>
+                window.onload = function() {
+                    alert('Please login first.');
+                    window.location.href = 'inscription.php';
+                }
+              </script>";
+    }
+    ?>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
